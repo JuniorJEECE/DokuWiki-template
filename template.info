@@ -1,0 +1,7 @@
+base     jeece
+author   Théo FIDRY
+email    theo.fidry@gmail.com
+date     2014-06-24
+name     Template JEECE
+desc     Template based on Twitter Bootstrap and Font-Awesome frameworks using the default DokuWiki template as a base. Design inspired by Require.JS and Grunt JS task runner web sites.
+url      https://www.dokuwiki.org/template:jeece

@@ -1,0 +1,36 @@
+{
+  "name": "dokuwiki-tpl-jeece",
+  "title": "dokuwiki-tpl-jeece",
+  "description": "DokuWiki template JEECE.",
+  "homepage": "https://git.jeece.fr",
+  "author": "JEECE, Junior-Entreprise de l'ECE Paris",
+  "copyright": "2014",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://theofidry@bitbucket.org/theofidry/kiosk.git"
+  },
+  "bugs": {
+    "url": "https://git.jeece.fr"
+  },
+  "main": "GruntFile.js",
+  "scripts": {
+  },
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-symlink": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-shell": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-banner": "lastest"
+  }
+}
