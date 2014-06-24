@@ -1,0 +1,28 @@
+/**
+ * Used for setting the radius border of all the edges of a given box.
+ *
+ * $radius
+ *  radius in pixels
+ */
+.border-radius(@radius: 0) {
+
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/**
+ * Used to modify the box model.
+ *
+ * $model
+ *  content-box: default value; the width and height are calculated without taking in account the padding or border
+ *  padding-box: the width and height are calculated with the padding but not the border
+ *  content-box: the width and height are calculated with taking in account the padding and border
+ */
+.box-sizing(@model: content-box) {
+
+  -webkit-box-sizing: @model;   // Safari/Chrome, other WebKit
+     -moz-box-sizing: @model;   // Firefox, other Gecko
+          box-sizing: @model;   // Opera/IE 8+
+}

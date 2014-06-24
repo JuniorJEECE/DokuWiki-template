@@ -21,38 +21,21 @@
 <!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
     <head>
-
-        <meta charset="utf-8" />
-
-        <!-- Set the matadata of the page -->
-        <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
-
-        <!-- Check if the JS is enabled by removing the 'no-js' class with JS -->
-        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
-
-        <!-- load the stylesheets and JS required and provided by DokuWiki; DokuWiki dispatcher -->
-        <?php tpl_metaheaders() ?>
-
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-        <!-- load the favicon; DokuWiki dispatcher -->
-        <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
-
-        <!-- include DokuWiki meta file -->
+        <!-- Include meta data -->
         <?php tpl_includeFile('meta.html') ?>
     </head>
     <body>
 
         <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
         <div id="dokuwiki__site">
-            <div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
+            <div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php echo ($showSidebar)? 'showSidebar': ''; ?> <?php echo ($hasSidebar)? 'hasSidebar': ''; ?>">
 
-                <!-- include the header -->
-                <?php include('tpl_header.php') ?>
+                <!-- HEADER -->
+                <?php include('header.html') ?>
 
                 <div class="wrapper group">
 
-                    <!-- ********** SIDEBAR ********** -->
+                    <!-- SIDEBAR -->
                     <?php if($showSidebar): ?>
 
                         <div id="dokuwiki__aside">
@@ -66,10 +49,9 @@
                                 </div>
                             </div>    <!-- /.aside -->
                         </div>    <!-- /#dokuwiki__aside -->
-                    <?php endif; ?>
+                    <?php endif; ?>  <!-- /SIDEBAR -->
 
-
-                    <!-- ********** CONTENT ********** -->
+                    <!-- CONTENT -->
                     <div id="dokuwiki__content">
                         <div class="pad group">
 
@@ -95,11 +77,11 @@
 
                             <?php tpl_flush() ?>
                         </div>    <!-- /.pad .group -->
-                    </div>    <!-- /#dokuwiki__content -->
+                    </div>    <!-- /CONTENT -->
 
                     <hr class="a11y" />
 
-                    <!-- ********** PAGE ACTIONS ********** -->
+                    <!-- PAGE ACTIONS -->
                     <div id="dokuwiki__pagetools">
 
                         <h3 class="a11y"><?php echo $lang['page_tools']; ?></h3>
@@ -129,7 +111,7 @@
                             </ul>
                         </div>    <!-- /.tools -->
                     </div>    <!-- /#dokuwiki__pagetools -->
-                </div>    <!-- /wrapper -->
+                </div>    <!-- /PAGE ACTIONS -->
 
                 <?php include('tpl_footer.php') ?>
             </div>    <!-- /#dokuwiki__top -->

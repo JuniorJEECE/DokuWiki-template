@@ -3,19 +3,30 @@ See template.info
 ## Directory layout ##
 
 /lib/tpl/jeece
-  \-- style.ini                  : specify the CSS files and some global variables; should at least specify one print and one scree CSS file
-  +-- css                        : CSS and LESS files
-  \-- main.php                   : general layout of Dokuwiki
+  \-- style.ini                  : specify the CSS files and some global variables; should at least specify one print
+                                   and one scree CSS file
+  +-- css                        : CSS and LESS files; Originals from the DokuWiki default template, specific
+  |                                modifications of the existant are done there but new files are in the less folder
+  \-- main.php                   : general layout of DokuWiki
   \-- mediamanager.php           : the media selection popup
   +-- images                     : all images used in the template
   \-- conf
     \-- default.php              : default settings for the template settings
-    \-- matadata.php             : configuration metadata describe properties of the settings as used by the Configuration Manager
+    \-- matadata.php             : configuration metadata describe properties of the settings as used by the
+  |                                Configuration Manager
   \-- lang                       : language files
     \-- <lang code>/lang.php     : localization strings used in the template
     \-- <lang code>/settings.php : localization strings used in the configuration manager
   \-- favicon.ico                : will be used if none exists in the media-directory
   \-- template.info.txt          : a text file with template information
+  \-- mata.html                  : custom meta data
+  \-- topheader.html             : file included right after the body tag
+  \-- header.html                : below the pagename and wiki title
+  \-- pageheader.html            : below the breadcrumbs and above the actual content
+  \-- pagefooter.html            : below the last change date
+  \-- footer.html                : at the very end of the page just before the closing body tag
+  +-- less                       : custom LESS files, compiled before being handled by DokuWiki (DokuWiki doesn't
+  |                                support the raw Twitter Bootstrap LESS files so we must compile them before)
 
 
 ## CSS loading ##

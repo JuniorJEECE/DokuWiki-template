@@ -1,0 +1,343 @@
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" id="main-navbar" role="navigation">
+    <div class="col-md-12">
+
+        <!-- Bloc showed only if a problem occur with the CSS -->
+        <ul class="a11y skip">
+            <li>
+                <a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a>
+            </li>
+        </ul>
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button class       = "navbar-toggle collapsed"
+                    data-target = "#menu-assets"
+                    data-toggle = "collapse"
+                    title       = "Liens utiles"
+                    type        = "button" >
+                    <span class="fa fa-bars"></span> <i class="caret"></i>
+            </button>
+
+            <?php
+
+                // get logo either out of the template images folder or data/media folder
+                $logoSize = array();
+                $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
+
+                // display logo and wiki title in a link to the home page
+                tpl_link(wl(), '<img alt="logo JEECE" id="brand" src="'.$logo.'" '.$logoSize[3].' />', 'accesskey="h" class="navbar-brand" title="JEECE, Junior-Étude ECE Paris"');
+            ?>
+        </div>  <!-- /.navbar-header -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu-assets">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ressources de la Junior <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <ul class="dropdown-submenu col-md-3">
+                                <li class="dropdown-header">JEECE</li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href   = "//portail.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Intranet de la Junior" >
+                                        <i class="fa fa-fw fa-book"></i> &nbsp;&nbsp;Portail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//wiki.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de connaissances" >
+                                        <i class="fa fa-fw fa-book"></i> &nbsp;&nbsp;Wiki
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//docs.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de fichiers" >
+                                        <i class="fa fa-fw fa-folder-open-o"></i> &nbsp;&nbsp;Owncloud
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//forums.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Forum" >
+                                        <i class="fa fa-fw fa-users"></i> &nbsp;&nbsp;Forum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//mail.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Client mail">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Webmail
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href   = "//dev.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Portail de développement" >
+                                        <i class="fa fa-fw fa-code"></i> &nbsp;&nbsp;Portail de Dev
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//dev.jeece.fr/redmine"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de projets" >
+                                        <i class="fa fa-fw fa-code-fork"></i> &nbsp;&nbsp;Redmine
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//dev.jeece.fr/jenkins"
+                                       target = "_blank"
+                                       title  = "Outil d'intégration continu" >
+                                        <i class="fa fa-fw fa-hdd-o"></i> &nbsp;&nbsp;phpMyAdmin
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//dev.jeece.fr/gitlab"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de dépôts git" >
+                                        <i class="fa fa-fw fa-code-fork"></i> &nbsp;&nbsp;GitLab
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//dev.jeece.fr/pma"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de bases de données" >
+                                        <i class="fa fa-fw fa-hdd-o"></i> &nbsp;&nbsp;phpMyAdmin
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href   = "//vma.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de mails">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;NetVibes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//vma.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de mails">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;MailChimp
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//vma.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de mails">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;WiseMapping
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//vma.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de mails">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;ViMbAdmin
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//vma.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Utilitaire de virtualisation">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Proxmox
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="dropdown-submenu col-md-3">
+                                <li class="dropdown-header">Réseaux sociaux</li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href   = "//www.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Page officielle" >
+                                        <i class="fa fa-fw fa-tags"></i> &nbsp;&nbsp;Page officielle
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//campus.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Portail étudiant" >
+                                        <i class="fa fa-fw fa-tag"></i> &nbsp;&nbsp;Portail étudiant
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.ece.fr/ecole-ingenieur/vie-etudiante/associations-dentreprise/jeece-junior-entreprise-ece-paris"
+                                       target = "_blank"
+                                       title  = "Page asso de l'ECE" >
+                                        Page ECE
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.facebook.com/JEECE.JE"
+                                       target = "_blank"
+                                       title  = "Page Facebook" >
+                                        <i class="fa fa-fw fa-facebook-square"></i> &nbsp;&nbsp;Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//twitter.com/JuniorJEECE"
+                                       target = "_blank"
+                                       title  = "Page Twitter">
+                                        <i class="fa fa-fw fa-twitter-square"></i> &nbsp;&nbsp;Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//plus.google.com/+JuniorJEECE"
+                                       target = "_blank"
+                                       title  = "Page Google+">
+                                        <i class="fa fa-fw fa-google-plus-square"></i> &nbsp;&nbsp;Google+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.linkedin.com/company/jeece"
+                                       target = "_blank"
+                                       title  = "Page LinkedIn" >
+                                        <i class="fa fa-fw fa-linkedin-square"></i> &nbsp;&nbsp;LinkedIn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//fr.viadeo.com/fr/profile/junior.jeece"
+                                       target = "_blank"
+                                       title  = "Page Viadeo">
+                                        Viadeo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.youtube.com/user/JuniorJEECE"
+                                       target = "_blank"
+                                       title  = "Page YouTube" >
+                                        <i class="fa fa-fw fa-youtube-square"></i> &nbsp;&nbsp;YouTube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.pinterest.com/junioreceparis"
+                                       target = "_blank"
+                                       title  = "Page Pinterest" >
+                                        <i class="fa fa-fw fa-pinterest-square"></i> &nbsp;&nbsp;Pinterest
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.scoop.it/t/junior-jeece"
+                                       target = "_blank"
+                                       title  = "Page Scoop.it!" >
+                                        Scoop.it!
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//www.lepointetudiants.net/lemag/?p=4400"
+                                       target = "_blank"
+                                       title  = "Page LePoint étudiant" >
+                                        LePoint étudiant
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//plus.google.com/104780284776295273196"
+                                       target = "_blank"
+                                       title  = "Forums">
+                                        <i class="fa fa-fw fa-map-marker"></i> &nbsp;&nbsp;Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="dropdown-submenu col-md-3">
+                                <li class="dropdown-header">Mouvement</li>
+
+                                <li>
+                                    <a href   = "//kiwi.junior-entreprises.com"
+                                       target = "_blank"
+                                       title  = "L'intranet des J-Eurs">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Kiwi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//talents.junior-entreprises.com"
+                                       target = "_blank"
+                                       title  = "Le réseau social des J-Eurs">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Talents.JE
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="dropdown-submenu col-md-3">
+                                <li class="dropdown-header">ECE Paris</li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href   = "//www.ece.fr"
+                                       target = "_blank"
+                                       title  = "Site internet">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Site internet
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//campus.ece.fr"
+                                       target = "_blank"
+                                       title  = "Campus">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Campus
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//projets.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Projets : PPE, PFE">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Projets
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//projets.jeece.fr"
+                                       target = "_blank"
+                                       title  = "Gestionnaire de mails">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Webmail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//cri.ece.fr"
+                                       target = "_blank"
+                                       title  = "Centre des ressources informatiques">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;CRI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//cri.ece.fr"
+                                       target = "_blank"
+                                       title  = "Centre des ressources informatiques">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;BDD
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//cri.ece.fr"
+                                       target = "_blank"
+                                       title  = "Centre des ressources informatiques">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Photos
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/"><b class="fa fa-dashboard"></b> &nbsp;Dashboard</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prénom NOM {PHOTO}<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  <!-- /.navbar-collapse -->
+    </div>  <!-- /.col -->
+</nav>

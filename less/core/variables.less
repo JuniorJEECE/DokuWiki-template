@@ -1,0 +1,202 @@
+//
+// Variables
+// --------------------------------------------------------------
+
+/////////////////////////////////////////////////////////////////
+//															                               //
+//						                COLORS 					        	       //
+// 															                               //
+/////////////////////////////////////////////////////////////////
+// ## Settings for some of the most global styles.
+// --------------------------------------------------------------
+/*
+ * Boostrap variables
+ */
+@gray-darker:             lighten(#000, 13.5%); // #222
+@gray-dark:               lighten(#000, 20%);   // #333
+@gray:                    lighten(#000, 33.5%); // #555
+@gray-light:              lighten(#000, 70%);   // #999 wrong
+@gray-lighter:            lighten(#000, 93.5%); // #eee
+
+@brand-primary:           #428bca;
+@brand-success:           #5cb85c;
+@brand-info:              #5bc0de;
+@brand-warning:           #f0ad4e;
+@brand-danger:            #d9534f;
+
+/*
+ * Custom variables
+ */
+@green-darker:            darken(#098700, 40%);
+@green-dark:              darken(#098700, 20%);
+@green:                   #209900;
+@green-light:             lighten(#098700, 20%);
+@green-lighter:           lighten(#098700, 40%);
+
+
+
+
+/////////////////////////////////////////////////////////////////
+//															                               //
+//						              TYPOGRAPHY 			          			   //
+// 															                               //
+/////////////////////////////////////////////////////////////////
+/*
+ * Bootstrap variables
+ */
+//@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+//@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+//@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        se7en;
+
+@font-size-base:          14px;
+//@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+//@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+//@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+//@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+//@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+//@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+//@font-size-h5:            @font-size-base;
+//@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+//@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+//@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+//@headings-font-family:    inherit;
+//@headings-font-weight:    500;
+//@headings-line-height:    1.1;
+//@headings-color:          inherit;
+
+/*
+ * Custom variables
+ */
+
+
+
+
+/////////////////////////////////////////////////////////////////
+//															                               //
+//						              SCAFFOLDING 				        		   //
+// 															                               //
+/////////////////////////////////////////////////////////////////
+// ## Settings for some of the most global styles.
+// --------------------------------------------------------------
+/*
+ * Boostrap variables
+ */
+@body-bg:               #fff;                                 // background color for `<body>`
+//@text-color:            @gray-dark;                // global text color on `<body>`
+//@link-color:            @brand-primary;            // global textual link color
+//@link-hover-color:      darken(@link-color, 15%);  // link hover color set via `darken()` function
+
+/*
+ * Custom variables
+ */
+
+
+
+/////////////////////////////////////////////////////////////////
+//															                               //
+//						               HEADER 				      		         //
+// 															                               //
+/////////////////////////////////////////////////////////////////
+@menu-assets-width:            900px;
+
+
+
+/////////////////////////////////////////////////////////////////
+//															                               //
+//							             NAVBAR 				          			   //
+// 															                               //
+/////////////////////////////////////////////////////////////////
+/*
+ * Bootstrap variables
+ */
+// Basics of a navbar
+//@navbar-height:                    50px;
+//@navbar-margin-bottom:             @line-height-computed;
+//@navbar-border-radius:             @border-radius-base;
+//@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+//@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+//@navbar-collapse-max-height:       340px;
+
+//@navbar-default-color:             #777;
+@navbar-default-bg:                @body-bg;
+//@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+//@navbar-default-link-color:                #777;
+//@navbar-default-link-hover-color:          #333;
+//@navbar-default-link-hover-bg:             transparent;
+//@navbar-default-link-active-color:         #555;
+//@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+//@navbar-default-link-disabled-color:       #ccc;
+//@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+//@navbar-default-brand-color:               @navbar-default-link-color;
+//@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+//@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+//@navbar-default-toggle-hover-bg:           #ddd;
+//@navbar-default-toggle-icon-bar-bg:        #888;
+//@navbar-default-toggle-border-color:       #ddd;
+
+// Inverted navbar
+// Reset inverted navbar basics
+//@navbar-inverse-color:                      @gray-light;
+//@navbar-inverse-bg:                         #222;
+//@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+//@navbar-inverse-link-color:                 @gray-light;
+//@navbar-inverse-link-hover-color:           #fff;
+//@navbar-inverse-link-hover-bg:              transparent;
+//@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+//@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+//@navbar-inverse-link-disabled-color:        #444;
+//@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+//@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+//navbar-inverse-brand-hover-color:          #fff;
+//@navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+//@navbar-inverse-toggle-hover-bg:            #333;
+//@navbar-inverse-toggle-icon-bar-bg:         #fff;
+//@navbar-inverse-toggle-border-color:        #333;
+
+/*
+ * Custom variables
+ */
+@navbar-brand-height:                                   100%;
+@navbar-brand-padding:                                  6px 0 4px 0;
+
+@navbar-fixed-top-ressources-menu-button-border:        1px solid @gray-light;
+@navbar-fixed-top-ressources-menu-button-height:        32px;
+@navbar-fixed-top-ressources-menu-button-padding-in:    5px 6px;
+@navbar-fixed-top-ressources-menu-button-padding-out:   9px 12px;
+@navbar-fixed-top-ressources-menu-button-radius:        4px;
+@navbar-fixed-top-ressources-menu-button-width:         42px;
+
+@navbar-fixed-top-color:                                @gray-lighter;
+@navbar-fixed-top-size:                                 (@font-size-base * .9);
+
+@navbar-fixed-top-link-button-bg:                       transparent;
+@navbar-fixed-top-link-button-border:                   @gray-light;
+@navbar-fixed-top-link-button-color:                    @navbar-fixed-top-link-button-border;
+
+@navbar-fixed-top-link-button-bg-hover:                 transparent;
+@navbar-fixed-top-link-button-border-hover:             @gray;
+@navbar-fixed-top-link-button-color-hover:              @navbar-fixed-top-link-button-border-hover;
+
+@navbar-fixed-top-link-button-bg-focus:                 @navbar-fixed-top-link-button-bg-hover;
+@navbar-fixed-top-link-button-border-focus:             @navbar-fixed-top-link-button-border-hover;
+@navbar-fixed-top-link-button-color-focus:              @navbar-fixed-top-link-button-color-hover;

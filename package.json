@@ -15,22 +15,17 @@
     "url": "https://git.jeece.fr"
   },
   "main": "GruntFile.js",
-  "scripts": {
-  },
+  "scripts": {},
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-contrib-concat": "latest",
-    "grunt-contrib-uglify": "latest",
     "grunt-contrib-symlink": "latest",
-    "grunt-contrib-imagemin": "latest",
-    "grunt-contrib-cssmin": "latest",
-    "grunt-shell": "latest",
-    "grunt-contrib-clean": "latest",
-    "grunt-banner": "lastest"
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-jscs-checker": "latest"
   }
 }

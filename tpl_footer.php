@@ -16,3 +16,7 @@
 <?php
     // include DokuWiki footer
     tpl_includeFile('footer.html');
+?>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="<?php echo tpl_getMediaFile(array("js/app.min.js")); ?>"></script>
