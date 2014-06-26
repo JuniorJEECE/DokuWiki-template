@@ -4,6 +4,7 @@
 
   h3 {
 
+    color:            @gray-darker;
     font-size:        @font-size-large;
     letter-spacing:   normal;
     margin-top:       0;
@@ -11,5 +12,34 @@
     padding-right:    5px;
     text-align:       center;
     text-transform:   uppercase;
+  }
+
+  .toc {
+    
+    .level1, .level2, .level3, .level4, .level5 {
+
+      a {
+
+        font-weight: bold;
+        color:       @gray;
+
+        &:hover, &:focus, &:visited, &:active {
+
+          text-decoration: none;
+        }
+
+        &:hover {
+
+          color: @gray-dark;
+        }
+      }
+    }
+
+    .level2, .level3, .level4, .level5 {
+
+      a {
+        font-weight: normal;
+      }
+    }
   }
 }

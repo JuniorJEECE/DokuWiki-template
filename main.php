@@ -22,7 +22,7 @@
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
     <head>
         <!-- Include meta data -->
-        <?php tpl_includeFile('meta.html') ?>
+        <?php tpl_includeFile('pages/meta.html') ?>
     </head>
     <body>
 
@@ -31,21 +31,21 @@
             <div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php echo ($showSidebar)? 'showSidebar': ''; ?> <?php echo ($hasSidebar)? 'hasSidebar': ''; ?>">
 
                 <!-- HEADER -->
-                <?php include('header.html') ?>
+                <?php include('pages/header.html') ?>
 
                 <div class="wrapper group">
 
                     <!-- SIDEBAR -->
-                    <?php include('sidebar.html') ?>
+                    <?php include('pages/sidebar.html') ?>
 
                     <!-- CONTENT -->
-                    <?php include('page.html') ?>
+                    <?php include('pages/page.html') ?>
 
                     <!-- PAGE ACTIONS -->
-                    <?php include('page_actions.html'); ?>
+                    <?php include('pages/page_actions.html'); ?>
                 </div>    <!-- /.wrapper.group -->
 
-                <?php include('tpl_footer.php') ?>
+                <?php include('pages/footer.html') ?>
             </div>    <!-- /#dokuwiki__top -->
         </div>    <!-- /#dokuwiki__site -->
 

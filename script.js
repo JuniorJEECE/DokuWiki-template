@@ -81,42 +81,42 @@ jQuery(function() {
 // Call this function on every load and reload.
 window.onload = function() {
 
-  // Correct the search bar.
-  jQuery(function() {
+    // Correct the search bar.
+    jQuery(function() {
 
-      jQuery('#dw__search > .no').addClass('input-group');                                              // add lacking class
-      jQuery('#qsearch__in').addClass('form-control');                                                  // add lacking class
-      jQuery('#qsearch__in').attr('placeholder', jQuery('#dw__search > .no > .button').attr('value'));  // add a placeholder
-      jQuery('#dw__search > .no > .button').remove();                                                   // remove useless element
-  });
+        jQuery('#dw__search > .no').addClass('input-group'); // add lacking class
+        jQuery('#qsearch__in').addClass('form-control'); // add lacking class
+        jQuery('#qsearch__in').attr('placeholder', jQuery('#dw__search > .no > .button').attr('value')); // add a placeholder
+        jQuery('#dw__search > .no > .button').remove(); // remove useless element
+    });
 
-  // Correct the user menu.
-  jQuery(function() {
+    // Correct the user menu.
+    jQuery(function() {
 
-      var user = jQuery('#user > bdi').html() + ' (' + jQuery('#user > bdi').next().html() + ') ' + '<b class="caret"></b>';  // get the user name and identifier
-      jQuery('#user').html(user);                                                                                             // update the content by keeping only the informations above
-  });
+        var user = jQuery('#user > bdi').html() + ' (' + jQuery('#user > bdi').next().html() + ') ' + '<b class="caret"></b>'; // get the user name and identifier
+        jQuery('#user').html(user); // update the content by keeping only the informations above
+    });
 
-  // Correct the trace.
-  jQuery(function() {
+    // Correct the trace.
+    jQuery(function() {
 
-      // Flush the new breadcrumb of all existing content.
-      jQuery('#new-breadcrumbs').each(function(index) {
+        // Flush the new breadcrumb of all existing content.
+        jQuery('#new-breadcrumbs').each(function(index) {
 
-          if (jQuery(this).parent().hasClass('trace-element'))
-              jQuery(this).remove();
-      });
+            if (jQuery(this).parent().hasClass('trace-element'))
+                jQuery(this).remove();
+        });
 
-      var n = jQuery('#dokuwiki-breadcrumbs bdi').children().length;
+        var n = jQuery('#dokuwiki-breadcrumbs bdi').children().length;
 
-      // Get all elements of the DokuWiki breadcrumb, for each retrive the link and add it to the new breadcrumb
-      jQuery('#dokuwiki-breadcrumbs bdi').each(function(index) {
+        // Get all elements of the DokuWiki breadcrumb, for each retrive the link and add it to the new breadcrumb
+        jQuery('#dokuwiki-breadcrumbs bdi').each(function(index) {
 
-          if (n <= 1 || index != 0)  // don't display the first element when there is multiple element; DokuWiki always display the home page as the root which is not the real tree
-              jQuery('#new-breadcrumbs').append('<li class="trace-element">' + jQuery(this).html() + '</li>');
-      });
+            if (n <= 1 || index !== 0) // don't display the first element when there is multiple element; DokuWiki always display the home page as the root which is not the real tree
+                jQuery('#new-breadcrumbs').append('<li class="trace-element">' + jQuery(this).html() + '</li>');
+        });
 
-      // Remove the DokuWiki breadcrumb.
-      jQuery('#dokuwiki-breadcrumbs').remove();
-  });
+        // Remove the DokuWiki breadcrumb.
+        jQuery('#dokuwiki-breadcrumbs').remove();
+    });
 };
