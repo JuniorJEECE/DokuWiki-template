@@ -1,4 +1,11 @@
+#dokuwiki__header {
+
+  margin-bottom:  (@navbar-height + @secondary-header-height - 22px);
+}
+
 #main-navbar {
+
+  font-family: @font-family-header;
 
   .navbar-toggle {
 
@@ -55,7 +62,7 @@
 .navbar-fixed-top {
 
   background-color:   @navbar-default-bg;
-  border:             none;
+  border:             @navbar-fixed-top-border;
   color:              @navbar-fixed-top-color !important;
   font-family:        Corbel;
   font-size:          @navbar-fixed-top-size !important;
@@ -66,6 +73,13 @@
     font-size:        @navbar-fixed-top-size !important;
     margin-top:       -1px !important;
   }
+
+  @media (min-width: @screen-md-min) {
+    > div {
+
+      padding-right:    30px;
+    }
+  }
 }
 
 .navbar-fixed-top-scrolling {
@@ -74,9 +88,12 @@
   .transition(all 0.1s ease-in);
 }
 
-#menu-assets > ul > li > .dropdown-menu {
+#assets-menu > li > .dropdown-menu {
 
-  min-width:  @menu-assets-width;
+  @media (min-width: @screen-md-min) {
+
+    min-width:  @menu-assets-width;
+  }
 
   > li .dropdown-submenu {
 
@@ -86,8 +103,9 @@
 
       display:      block;
       padding:      3px 20px;
+      padding-left: 0;
       clear:        both;
-      font-weight:  normal;
+      font-weight:  normal !important;
       line-height:  @line-height-base !important;
       color:        @navbar-fixed-top-link-button-color-focus !important;
       white-space:  nowrap;
@@ -95,10 +113,17 @@
 
     .dropdown-header {
 
-      color: darken(@dropdown-header-color, 20%);
-      font-size: (@font-size-small * 1.1);
-      line-height: @line-height-base;
-      padding-bottom: 0;
+      background-color: @gray-lighter;
+      color:            darken(@dropdown-header-color, 20%);
+      font-size:        @font-size-small;
+      line-height:      @line-height-base;
+      margin-bottom:    4px;
+      margin-left:      0;
+      margin-right:     0;
+      padding-bottom:   2px;
+      padding-left:     0;
+      padding-right:    0;
+      text-align:       center;
     }
   }
 
@@ -106,9 +131,86 @@
     &:hover,
     &:focus {
 
-      text-decoration: none !important;
-      color: darken(@navbar-fixed-top-link-button-color-focus, 50%) !important;
-      background-color: @dropdown-link-hover-bg !important;
+      text-decoration:   none !important;
+      color:             darken(@navbar-fixed-top-link-button-color-focus, 50%) !important;
+      background-color:  @dropdown-link-hover-bg !important;
     }
   }
+}
+
+.nav > li > a {
+
+  padding-left:   0;
+  padding-right:  0;
+}
+
+#qsearch__in {
+
+  margin-top: 7px;
+}
+
+#secondary-navbar {
+
+  font-family: @font-family-header;
+  height:      @secondary-header-height;
+  margin-top:  @navbar-height;
+  left:        0;
+  position:    absolute;
+  right:       0;
+
+  .breadcrumb {
+
+    background:   none !important;
+    .border-radius(0);
+    font-family:  @font-family-sans-serif;
+    font-size:    (@font-size-small * 1.15);
+    margin:       0;
+    margin-left:  20px;
+    margin-top:   -5px;
+    padding:      5px 10px;
+
+    > li {
+
+      margin:     0;
+
+      & > a {
+        color:    @navbar-fixed-top-link-button-color;
+
+        &:hover {
+
+          color:            @navbar-fixed-top-link-button-color-hover;
+        }
+
+        &:focus {
+
+          color:            @navbar-fixed-top-link-button-color-focus;
+        }
+      }
+    }
+  }
+
+  .container-fluid {
+
+    margin-top: 7px;
+  }
+
+  .navbar-nav {
+
+    margin-bottom: 0;
+
+    > li > a {
+
+      padding-top:     0;
+      padding-bottom:  0;
+    }
+  }
+
+  h1 {
+    font-family: @font-family-sans-serif;
+  }
+}
+
+.navbar {
+
+  min-height: initial;
 }

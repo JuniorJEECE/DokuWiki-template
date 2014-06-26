@@ -15,81 +15,12 @@
 
         <div class="headings group">
             <?php include('top_fixed_navbar.html') ?>
+        </div>
 
-
-
-            <h1>
-
-            </h1>
-
-        </div>    <!-- /.headings .group -->
-
-
-        <span>'.$conf['title'].'</span>'
-
-
-        <div class="tools group">
-
-            <!-- USER TOOLS -->
-            <?php if ($conf['useacl']): ?>
-                <div id="dokuwiki__usertools">
-                    <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
-                    <ul>
-                        <?php
-                            if (!empty($_SERVER['REMOTE_USER'])) {
-                                echo '<li class="user">';
-                                    tpl_userinfo(); /* 'Logged in as ...' */
-                                echo '</li>';
-                            }
-                            tpl_action('admin', 1, 'li');
-                            tpl_action('profile', 1, 'li');
-                            tpl_action('register', 1, 'li');
-                            tpl_action('login', 1, 'li');
-                        ?>
-                    </ul>
-                </div>    <!-- /#dokuwiki__usertools -->
-            <?php endif ?>
-
-            <!-- SITE TOOLS -->
-            <div id="dokuwiki__sitetools">
-                <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
-
-                <!-- show search bar -->
-                <?php tpl_searchform(); ?>
-
-                <div class="mobileTools">
-                    <?php tpl_actiondropdown($lang['tools']); ?>
-                </div>
-
-                <ul>
-                    <?php
-                        tpl_action('recent', 1, 'li');
-                        tpl_action('media', 1, 'li');
-                        tpl_action('index', 1, 'li');
-                    ?>
-                </ul>
-            </div>    <!-- /#dokuwiki__sitetools -->
-        </div>    <!-- /.tools .group -->
-
-
-        <!-- BREADCRUMBS -->
-        <!-- check if breadcrumbs are enabled -->
-        <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
-
-            <div class="breadcrumbs">
-                <?php if($conf['youarehere']): ?>
-                    <div class="youarehere"><?php tpl_youarehere() ?></div>
-                <?php endif ?>
-                <?php if($conf['breadcrumbs']): ?>
-                    <div class="trace"><?php tpl_breadcrumbs() ?></div>
-                <?php endif ?>
-            </div>    <!-- /.breadcrumbs -->
-
-        <?php endif ?>
+        <?php include('top_navbar.html') ?>
 
         <!-- Display error/info messages -->
         <?php html_msgarea() ?>
 
-        <hr class="a11y" />
       </div>    <!-- /.pad .group -->
 </div>    <!-- /#dokuwiki__header -->

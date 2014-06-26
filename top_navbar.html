@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default" id="secondary-navbar" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 class="text-muted"><?php echo $conf['title'] ?></h1>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <!-- BREADCRUMBS -->
+                <ol class="breadcrumb" id="new-breadcrumbs">
+                    <li class="text-muted">Trace :</li>
+                </ol>
+
+                <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
+
+                    <div class="breadcrumbs" id="dokuwiki-breadcrumbs">
+                        <?php if($conf['youarehere']): ?>
+                            <div class="youarehere"><?php tpl_youarehere() ?></div>
+                        <?php endif ?>
+                        <!-- <?php if($conf['breadcrumbs']): ?>
+                            <div class="trace"><?php tpl_breadcrumbs() ?></div>
+                        <?php endif ?> -->
+                    </div>    <!-- /.breadcrumbs -->
+
+                <?php endif ?>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <?php
+                    tpl_action('index', 1, 'li');
+                    tpl_action('media', 1, 'li');
+                    tpl_action('recent', 1, 'li');
+                ?>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,38 @@
+<?php
+
+    /**
+     * Template page which correspond to the actual content of the edited page.
+     *
+     * Those comments are done in PHP so that there are not outputed in the HTML file.
+     */
+
+     // must be run from within DokuWiki
+     if (!defined('DOKU_INC')) die();
+?>
+
+<div id="dokuwiki__content">
+    <div class="pad group">
+
+        <!-- show the page ID -->
+        <div class="pageId">
+            <span>ID : <?php echo hsc($ID) ?></span>
+        </div>
+
+        <!-- show the page content -->
+        <div class="page group">
+
+            <?php tpl_flush() ?>
+            <?php tpl_includeFile('pageheader.html') ?>
+
+            <!-- wikipage -->
+            <?php tpl_content() ?>
+
+            <?php tpl_includeFile('pagefooter.html') ?>
+        </div>
+
+        <!-- show the information about when the last page has been modified -->
+        <div class="docInfo"><?php tpl_pageinfo() ?></div>
+
+        <?php tpl_flush() ?>
+    </div>    <!-- /.pad .group -->
+</div>    <!-- /CONTENT -->

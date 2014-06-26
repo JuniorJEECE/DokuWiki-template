@@ -11,10 +11,10 @@
 .dokuwiki a.wikilink2 {
     text-decoration: none;
 }
-.dokuwiki a.wikilink2:link,
+/*.dokuwiki a.wikilink2:link,
 .dokuwiki a.wikilink2:visited {
     border-bottom: 1px dashed;
-}
+}*/
 .dokuwiki a.wikilink2:hover,
 .dokuwiki a.wikilink2:active,
 .dokuwiki a.wikilink2:focus {

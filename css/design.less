@@ -11,7 +11,6 @@
 ********************************************************************/
 
 #dokuwiki__header {
-    padding: 2em 0 1.5em;
 
     .headings,
     .tools {
@@ -48,12 +47,6 @@
         margin-bottom: 0;
         font-size: 0.875em;
     }
-
-    /* make all links in header (including breadcrumb and interwiki) same colour as the rest */
-    a {
-        color: @ini_link;
-        background-color: inherit;
-    }
 }
 
 [dir=rtl] #dokuwiki__header h1 img {
@@ -66,19 +59,6 @@
 ********************************************************************/
 
 /* highlight selected tool */
-.mode_admin a.action.admin,
-.mode_login a.action.login,
-.mode_register a.action.register,
-.mode_profile a.action.profile,
-.mode_recent a.action.recent,
-.mode_index a.action.index,
-.mode_media a.action.media,
-.mode_revisions a.action.revs,
-.mode_backlink a.action.backlink,
-.mode_subscribe a.action.subscribe {
-    font-weight: bold;
-}
-
 #dokuwiki__header .tools {
     ul {
         padding-left: 0;
@@ -209,7 +189,7 @@ form.search {
 
     input.edit {
         width: 18em;
-        padding: .35em 22px .35em .1em;
+        //padding: .35em 22px .35em .1em;
     }
 
     input.button {
@@ -349,11 +329,11 @@ form.search {
 ********************************************************************/
 
 .dokuwiki .pageId {
-    position: absolute;
-    top: -2.3em;
-    right: -1em;
+    //position: absolute;
+    top: 0;
+    right: 0;
     overflow: hidden;
-    padding: 1em 1em 0;
+    padding: 0;
 
     span {
         font-size: 0.875em;
@@ -373,10 +353,12 @@ form.search {
     background: @ini_background;
     color: inherit;
     border: 1px solid @ini_background_alt;
-    box-shadow: 0 0 .5em @ini_text_alt;
+    border-top: none;
+    //box-shadow: 0 0 .5em @ini_text_alt;
     border-radius: 2px;
     padding: 1.556em 2em 2em;
     margin-bottom: .5em;
+    margin-top: -19px;
     overflow: hidden;
     word-wrap: break-word;
 }

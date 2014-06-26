@@ -1,19 +1,11 @@
-
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top" id="main-navbar" role="navigation">
     <div class="col-md-12">
 
-        <!-- Bloc showed only if a problem occur with the CSS -->
-        <ul class="a11y skip">
-            <li>
-                <a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a>
-            </li>
-        </ul>
-
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button class       = "navbar-toggle collapsed"
-                    data-target = "#menu-assets"
+                    data-target = "#header-menu"
                     data-toggle = "collapse"
                     title       = "Liens utiles"
                     type        = "button" >
@@ -27,20 +19,21 @@
                 $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
 
                 // display logo and wiki title in a link to the home page
-                tpl_link(wl(), '<img alt="logo JEECE" id="brand" src="'.$logo.'" '.$logoSize[3].' />', 'accesskey="h" class="navbar-brand" title="JEECE, Junior-Étude ECE Paris"');
+                tpl_link(wl(), '<img alt="JEECE" id="brand" src="'.$logo.'" '.$logoSize[3].' />', 'accesskey="h" class="navbar-brand" title="JEECE, Junior-Étude ECE Paris"');
             ?>
         </div>  <!-- /.navbar-header -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="menu-assets">
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse" id="header-menu">
+
+            <!-- Assets menu -->
+            <ul class="nav navbar-nav" id="assets-menu">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ressources de la Junior <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
+                        <li style="margin-left: 0;">
                             <ul class="dropdown-submenu col-md-3">
                                 <li class="dropdown-header">JEECE</li>
-                                <li class="divider"></li>
                                 <li>
                                     <a href   = "//portail.jeece.fr"
                                        target = "_blank"
@@ -95,7 +88,7 @@
                                     <a href   = "//dev.jeece.fr/jenkins"
                                        target = "_blank"
                                        title  = "Outil d'intégration continu" >
-                                        <i class="fa fa-fw fa-hdd-o"></i> &nbsp;&nbsp;phpMyAdmin
+                                        <i class="fa fa-fw fa-hdd-o"></i> &nbsp;&nbsp;Jenkins
                                     </a>
                                 </li>
                                 <li>
@@ -114,30 +107,30 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href   = "//vma.jeece.fr"
+                                    <a href   = "//netvibes.net"
                                        target = "_blank"
-                                       title  = "Gestionnaire de mails">
+                                       title  = "Aggrégateur de flux">
                                         <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;NetVibes
                                     </a>
                                 </li>
                                 <li>
-                                    <a href   = "//vma.jeece.fr"
+                                    <a href   = "//mailchimp.com"
                                        target = "_blank"
-                                       title  = "Gestionnaire de mails">
+                                       title  = "Outil de newsletters">
                                         <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;MailChimp
                                     </a>
                                 </li>
                                 <li>
-                                    <a href   = "//vma.jeece.fr"
+                                    <a href   = "//wisemapping.com"
                                        target = "_blank"
-                                       title  = "Gestionnaire de mails">
+                                       title  = "Outil de wise mapping">
                                         <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;WiseMapping
                                     </a>
                                 </li>
                                 <li>
                                     <a href   = "//vma.jeece.fr"
                                        target = "_blank"
-                                       title  = "Gestionnaire de mails">
+                                       title  = "Gestionnaire d'alias et comptes mail">
                                         <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;ViMbAdmin
                                     </a>
                                 </li>
@@ -153,7 +146,6 @@
                         <li>
                             <ul class="dropdown-submenu col-md-3">
                                 <li class="dropdown-header">Réseaux sociaux</li>
-                                <li class="divider"></li>
                                 <li>
                                     <a href   = "//www.jeece.fr"
                                        target = "_blank"
@@ -250,7 +242,6 @@
                         <li>
                             <ul class="dropdown-submenu col-md-3">
                                 <li class="dropdown-header">Mouvement</li>
-
                                 <li>
                                     <a href   = "//kiwi.junior-entreprises.com"
                                        target = "_blank"
@@ -268,9 +259,8 @@
                             </ul>
                         </li>
                         <li>
-                            <ul class="dropdown-submenu col-md-3">
+                            <ul class="dropdown-submenu col-md-3" style="padding-right: 0;">
                                 <li class="dropdown-header">ECE Paris</li>
-                                <li class="divider"></li>
                                 <li>
                                     <a href   = "//www.ece.fr"
                                        target = "_blank"
@@ -320,24 +310,103 @@
                                         <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Photos
                                     </a>
                                 </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href   = "//alumni-ece.ece.fr"
+                                       target = "_blank"
+                                       title  = "Alumni ECE, réseau d'anciens de l'ECE">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Alumni ECE
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//bde.ece.fr"
+                                       target = "_blank"
+                                       title  = "Bureau des Étudiants">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;BDE
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//bds.ece.fr"
+                                       target = "_blank"
+                                       title  = "Bureau des Sports">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;BDS
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//eceborg.ece.fr"
+                                       target = "_blank"
+                                       title  = "ECEBORG, association de robotique">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;ECEBORG
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//ece-entreprise.ece.fr"
+                                       target = "_blank"
+                                       title  = "ECE Entreprise, s'occupe des partenaires de l'ECE">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;ECE Entreprise
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//es.ece.fr"
+                                       target = "_blank"
+                                       title  = "Équipe Système">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;ES
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//iteam.ece.fr"
+                                       target = "_blank"
+                                       title  = "iTeam, promotion des logiciels libres">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;iTeam
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//jbtv.ece.fr"
+                                       target = "_blank"
+                                       title  = "JBTV, Association multimédia">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;JBTV
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href   = "//jobservice.ece.fr"
+                                       target = "_blank"
+                                       title  = "Job'Service, les petits jobs">
+                                        <i class="fa fa-fw fa-envelope-o"></i> &nbsp;&nbsp;Job'Service
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/"><b class="fa fa-dashboard"></b> &nbsp;Dashboard</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prénom NOM {PHOTO}<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
+            </ul>    <!-- /#assets-menu -->
+
+            <!-- Navigability links -->
+            <ul class="nav navbar-nav navbar-right" id="navigability-links">
+
+                <!-- User menu -->
+                <?php
+                  if (empty($_SERVER['REMOTE_USER']))  // check if the user is logged in
+                      tpl_action('login', 1, 'li');    // user not logged in
+                  else {
+
+                      // user logged in
+                      echo '<li class="dropdown">';
+                      echo     '<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="user">';
+                                  tpl_userinfo();
+                      echo     '</a>';
+                      echo     '<ul class="dropdown-menu">';
+                      tpl_action('admin', 1, 'li');
+                      tpl_action('profile', 1, 'li');
+                      tpl_action('register', 1, 'li');
+                      tpl_action('login', 1, 'li');    // when logged in becomes log out action
+                      echo     '</ul>';
+                      echo  '</li>';
+                  }
+                ?>
+
+                <!-- Search bar -->
+                <li><?php tpl_searchform(); ?></li>
+            </ul>    <!-- /#navigability-links -->
         </div>  <!-- /.navbar-collapse -->
     </div>  <!-- /.col -->
 </nav>

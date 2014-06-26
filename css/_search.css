@@ -73,10 +73,6 @@
 /* AJAX quicksearch popup
 ********************************************************************/
 
-.dokuwiki form.search div.no {
-    position: relative;
-}
-
 /* .JSpopup */
 .dokuwiki form.search div.ajax_qsearch {
     position: absolute;

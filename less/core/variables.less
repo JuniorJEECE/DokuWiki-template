@@ -1,5 +1,5 @@
 //
-// Variables
+// Primary Variables
 // --------------------------------------------------------------
 
 /////////////////////////////////////////////////////////////////
@@ -18,7 +18,7 @@
 @gray-light:              lighten(#000, 70%);   // #999 wrong
 @gray-lighter:            lighten(#000, 93.5%); // #eee
 
-@brand-primary:           #428bca;
+@brand-primary:           @green;
 @brand-success:           #5cb85c;
 @brand-info:              #5bc0de;
 @brand-warning:           #f0ad4e;
@@ -27,11 +27,11 @@
 /*
  * Custom variables
  */
-@green-darker:            darken(#098700, 40%);
-@green-dark:              darken(#098700, 20%);
+@green-darker:            darken(#098700, 30%);
+@green-dark:              darken(#098700, 15%);
 @green:                   #209900;
-@green-light:             lighten(#098700, 20%);
-@green-lighter:           lighten(#098700, 40%);
+@green-light:             lighten(#098700, 15%);
+@green-lighter:           lighten(#098700, 30%);
 
 
 
@@ -48,7 +48,7 @@
 //@font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 //@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        se7en;
+@font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          14px;
 //@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -75,6 +75,7 @@
 /*
  * Custom variables
  */
+ @font-family-header:     Corbel;
 
 
 
@@ -92,11 +93,50 @@
 @body-bg:               #fff;                                 // background color for `<body>`
 //@text-color:            @gray-dark;                // global text color on `<body>`
 //@link-color:            @brand-primary;            // global textual link color
-//@link-hover-color:      darken(@link-color, 15%);  // link hover color set via `darken()` function
+@link-hover-color:      darken(@link-color, 5%);  // link hover color set via `darken()` function
 
 /*
  * Custom variables
  */
+
+
+
+
+//
+// Secondary Variables
+// --------------------------------------------------------------
+
+/////////////////////////////////////////////////////////////////
+//															                               //
+//							           DROPDOWNS 				          			   //
+// 															                               //
+/////////////////////////////////////////////////////////////////
+/*
+ * Bootstrap variables
+ */
+
+// @dropdown-bg:                    #fff;  //** Background for the dropdown menu.
+// @dropdown-border:                rgba(0,0,0,.15);  //** Dropdown menu `border-color`.
+// @dropdown-fallback-border:       #ccc;  //** Dropdown menu `border-color` **for IE8**.
+// @dropdown-divider-bg:            #e5e5e5;  //** Divider color for between dropdown items.
+//
+// @dropdown-link-color:            @gray-dark;  //** Dropdown link text color.
+// @dropdown-link-hover-color:      darken(@gray-dark, 5%);  //** Hover color for dropdown links.
+// @dropdown-link-hover-bg:         #f5f5f5;  //** Hover background for dropdown links.
+//
+// @dropdown-link-active-color:     @component-active-color;  //** Active dropdown menu item text color.
+// @dropdown-link-active-bg:        @component-active-bg;  //** Active dropdown menu item background color.
+//
+// @dropdown-link-disabled-color:   @gray-light;  //** Disabled dropdown menu item background color.
+//
+// @dropdown-header-color:          @gray-light;  //** Text color for headers within dropdown menus.
+//
+// @dropdown-caret-color:           #000;  // Note: Deprecated @dropdown-caret-color as of v3.1.0
+/*
+ * Custom variables
+ */
+@dropdown-shadow:                 0 3px 6px @gray-lighter;
+
 
 
 
@@ -105,7 +145,10 @@
 //						               HEADER 				      		         //
 // 															                               //
 /////////////////////////////////////////////////////////////////
-@menu-assets-width:            900px;
+@menu-assets-width:         750px;
+
+@secondary-header-height:   (@navbar-height * .7);
+
 
 
 
@@ -186,6 +229,7 @@
 @navbar-fixed-top-ressources-menu-button-radius:        4px;
 @navbar-fixed-top-ressources-menu-button-width:         42px;
 
+@navbar-fixed-top-border:                               1px solid @navbar-fixed-top-color;
 @navbar-fixed-top-color:                                @gray-lighter;
 @navbar-fixed-top-size:                                 (@font-size-base * .9);
 
