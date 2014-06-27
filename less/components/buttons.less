@@ -8,6 +8,11 @@
     }
 }
 
+input {
+
+    box-shadow: none;
+}
+
 input.button {
 
     .btn;
@@ -23,5 +28,19 @@ input.button {
 
         background-color:   @brand-primary;
         border-color:       @brand-primary;
+    }
+}
+
+#user__manager {
+
+    input.button[disabled] {
+
+        color: white !important;
+    }
+
+    input[type="submit"] {
+
+        .btn;
+        .btn-primary;
     }
 }

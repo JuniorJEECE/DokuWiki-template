@@ -78,6 +78,8 @@ jQuery(function() {
     }
 });
 
+
+
 // Call this function on every load and reload.
 window.onload = function() {
 
@@ -118,5 +120,22 @@ window.onload = function() {
 
         // Remove the DokuWiki breadcrumb.
         jQuery('#dokuwiki-breadcrumbs').remove();
+    });
+
+    // Adjust the height
+    jQuery(function() {
+
+        var height = jQuery(window).height() - (jQuery('#dokuwiki__header').height() + jQuery('#dokuwiki__footer').height());
+        jQuery('#dokuwiki__site .wrapper').css('min-height', height + 'px');
+    });
+};
+
+window.onresize = function() {
+
+    // Adjust the height
+    jQuery(function() {
+
+        var height = jQuery(window).height() - (jQuery('#dokuwiki__header').height() + jQuery('#dokuwiki__footer').height());
+        jQuery('#dokuwiki__site .wrapper').css('min-height', height + 'px');
     });
 };

@@ -5828,6 +5828,32 @@ button.close {
  *  padding-box: the width and height are calculated with the padding but not the border
  *  content-box: the width and height are calculated with taking in account the padding and border
  */
+.admin_tasks a,
+.admin_tasks a:link,
+.admin_tasks a:visited {
+  color: #b3b3b3;
+}
+.admin_tasks a:hover {
+  color: #555555;
+  text-decoration: none;
+}
+#acl__user {
+  margin-right: 10px;
+}
+#acl__user input.button {
+  margin: 0;
+}
+.error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+.error hr {
+  border-top-color: #e4b9c0;
+}
+.error .alert-link {
+  color: #843534;
+}
 body {
   background: #ffffff;
 }
@@ -5836,6 +5862,9 @@ body {
 }
 .button:focus {
   outline: none !important;
+}
+input {
+  box-shadow: none;
 }
 input.button {
   display: inline-block;
@@ -5933,12 +5962,95 @@ input.button:hover {
   background-color: #209900;
   border-color: #209900;
 }
-.dropdown-menu {
-  -webkit-box-shadow: 0 3px 6px #eeeeee;
-  box-shadow: 0 3px 6px #eeeeee;
+#user__manager input.button[disabled] {
+  color: white !important;
 }
-.dropdown-menu > li > a {
-  padding-left: 0;
+#user__manager input[type="submit"] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ffffff;
+  background-color: #209900;
+  border-color: #1b8000;
+}
+#user__manager input[type="submit"]:focus,
+#user__manager input[type="submit"]:active:focus,
+#user__manager input[type="submit"].active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+#user__manager input[type="submit"]:hover,
+#user__manager input[type="submit"]:focus {
+  color: #333333;
+  text-decoration: none;
+}
+#user__manager input[type="submit"]:active,
+#user__manager input[type="submit"].active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+#user__manager input[type="submit"].disabled,
+#user__manager input[type="submit"][disabled],
+fieldset[disabled] #user__manager input[type="submit"] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#user__manager input[type="submit"]:hover,
+#user__manager input[type="submit"]:focus,
+#user__manager input[type="submit"]:active,
+#user__manager input[type="submit"].active,
+.open .dropdown-toggle#user__manager input[type="submit"] {
+  color: #ffffff;
+  background-color: #177000;
+  border-color: #0e4200;
+}
+#user__manager input[type="submit"]:active,
+#user__manager input[type="submit"].active,
+.open .dropdown-toggle#user__manager input[type="submit"] {
+  background-image: none;
+}
+#user__manager input[type="submit"].disabled,
+#user__manager input[type="submit"][disabled],
+fieldset[disabled] #user__manager input[type="submit"],
+#user__manager input[type="submit"].disabled:hover,
+#user__manager input[type="submit"][disabled]:hover,
+fieldset[disabled] #user__manager input[type="submit"]:hover,
+#user__manager input[type="submit"].disabled:focus,
+#user__manager input[type="submit"][disabled]:focus,
+fieldset[disabled] #user__manager input[type="submit"]:focus,
+#user__manager input[type="submit"].disabled:active,
+#user__manager input[type="submit"][disabled]:active,
+fieldset[disabled] #user__manager input[type="submit"]:active,
+#user__manager input[type="submit"].disabled.active,
+#user__manager input[type="submit"][disabled].active,
+fieldset[disabled] #user__manager input[type="submit"].active {
+  background-color: #209900;
+  border-color: #1b8000;
+}
+#user__manager input[type="submit"] .badge {
+  color: #209900;
+  background-color: #ffffff;
 }
 code,
 kbd,
@@ -5965,6 +6077,16 @@ pre {
 }
 dl.file > dt > a {
   color: #dd1144;
+}
+.dropdown-menu {
+  -webkit-box-shadow: 0 3px 6px #eeeeee;
+  box-shadow: 0 3px 6px #eeeeee;
+}
+.dropdown-menu > li > a {
+  padding-left: 0;
+}
+.dokuwiki textarea.edit:focus {
+  outline: none;
 }
 #dokuwiki__header {
   margin-bottom: 63px;
@@ -6122,6 +6244,8 @@ dl.file > dt > a {
   min-height: initial;
 }
 .docInfo {
+  color: #b3b3b3;
+  font-style: oblique;
   padding-right: 20px;
 }
 #dokuwiki__footer {
@@ -6141,6 +6265,159 @@ dl.file > dt > a {
   border-color: #209900;
   box-shadow: none;
 }
+input.edit {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: inline-block;
+  margin-left: 10px;
+  width: auto;
+}
+input.edit:focus {
+  border-color: #209900;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 153, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 153, 0, 0.6);
+}
+input.edit::-moz-placeholder {
+  color: #b3b3b3;
+  opacity: 1;
+}
+input.edit:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+input.edit::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+input.edit[disabled],
+input.edit[readonly],
+fieldset[disabled] input.edit {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textareainput.edit {
+  height: auto;
+}
+input.edit,
+input.edit:focus {
+  box-shadow: none;
+}
+.dokuwiki label.block {
+  width: 100%;
+}
+.dokuwiki label.block input.edit {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: inline-block;
+  margin-left: 10px;
+  width: 70%;
+}
+.dokuwiki label.block input.edit:focus {
+  border-color: #209900;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 153, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 153, 0, 0.6);
+}
+.dokuwiki label.block input.edit::-moz-placeholder {
+  color: #b3b3b3;
+  opacity: 1;
+}
+.dokuwiki label.block input.edit:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+.dokuwiki label.block input.edit::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+.dokuwiki label.block input.edit[disabled],
+.dokuwiki label.block input.edit[readonly],
+fieldset[disabled] .dokuwiki label.block input.edit {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.dokuwiki label.block input.edit {
+  height: auto;
+}
+.dokuwiki label.block input.edit,
+.dokuwiki label.block input.edit:focus {
+  box-shadow: none;
+}
+#acl__user input.edit {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: inline-block;
+  margin-left: 10px;
+  width: 30%;
+}
+#acl__user input.edit:focus {
+  border-color: #209900;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 153, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(32, 153, 0, 0.6);
+}
+#acl__user input.edit::-moz-placeholder {
+  color: #b3b3b3;
+  opacity: 1;
+}
+#acl__user input.edit:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+#acl__user input.edit::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+#acl__user input.edit[disabled],
+#acl__user input.edit[readonly],
+fieldset[disabled] #acl__user input.edit {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea#acl__user input.edit {
+  height: auto;
+}
+#acl__user input.edit,
+#acl__user input.edit:focus {
+  box-shadow: none;
+}
 a:hover {
   color: #1b8000;
   text-decoration: none;
@@ -6151,6 +6428,16 @@ a:visited {
 }
 a:focus {
   outline: none;
+}
+.dokuwiki fieldset {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+.dokuwiki legend {
+  border: none;
 }
 .table > table.inline {
   width: 100%;
