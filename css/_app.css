@@ -6761,8 +6761,25 @@ a:focus {
 #dokuwiki__aside .level5 {
   list-style: none;
 }
-#dokuwiki__aside ul {
+#dokuwiki__aside .addnewpage {
+  padding: 8px;
+  padding-top: 0;
+}
+#dokuwiki__aside .addnewpage #np_cat {
+  height: 34px;
+}
+#dokuwiki__aside .addnewpage input.button {
+  margin-top: 5px;
+}
+#dokuwiki__aside .addnewpage input.edit {
+  height: 34px;
+  width: 143px;
+}
+#dokuwiki__aside .aside {
   background-color: #fff;
+  box-shadow: 0 0 1px #eeeeee;
+}
+#dokuwiki__aside ul {
   padding-left: 0;
 }
 #dokuwiki__aside li {
@@ -6789,9 +6806,6 @@ a:focus {
   padding: 8px 0;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
-#dokuwiki__aside .level2 > .li:hover {
-  background-color: #eeeeee;
-}
 #dokuwiki__aside .level2 {
   padding-bottom: 0;
   padding-top: 0;
@@ -6804,11 +6818,14 @@ a:focus {
 #dokuwiki__aside .level2 > ul {
   margin-top: 4px;
 }
-#dokuwiki__aside .level3 > .li {
-  padding-left: 35px;
+#dokuwiki__aside .level2 > .li:hover {
+  background-color: #eeeeee;
 }
 #dokuwiki__aside .level3:hover {
   background-color: #eeeeee;
+}
+#dokuwiki__aside .level3 > .li {
+  padding-left: 35px;
 }
 #dokuwiki__aside a,
 #dokuwiki__aside a:link,
