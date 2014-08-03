@@ -83,6 +83,7 @@ jQuery(function() {
 // Call this function on every load and reload.
 window.onload = function() {
 
+
     // Correct the search bar.
     jQuery(function() {
 
@@ -92,12 +93,14 @@ window.onload = function() {
         jQuery('#dw__search > .no > .button').remove(); // remove useless element
     });
 
+
     // Correct the user menu.
     jQuery(function() {
 
         var user = jQuery('#user > bdi').html() + ' (' + jQuery('#user > bdi').next().html() + ') ' + '<b class="caret"></b>'; // get the user name and identifier
         jQuery('#user').html(user); // update the content by keeping only the informations above
     });
+
 
     // Correct the trace.
     jQuery(function() {
@@ -122,12 +125,14 @@ window.onload = function() {
         jQuery('#dokuwiki-breadcrumbs').remove();
     });
 
+
     // Adjust the height
     jQuery(function() {
 
         var height = jQuery(window).height() - (jQuery('#dokuwiki__header').height() + jQuery('#dokuwiki__footer').height());
         jQuery('#dokuwiki__site .wrapper').css('min-height', height + 'px');
     });
+
 
     // Add icons
     jQuery(function() {
@@ -141,6 +146,16 @@ window.onload = function() {
             jQuery('a.action.logout').prepend('<i class="fa fa-fw fa-sign-out"></i> &nbsp;&nbsp;');
         } else
             jQuery('a.action.login').prepend('<i class="fa fa-fw fa-unlock-alt"></i> &nbsp;&nbsp;');
+    });
+
+
+    // Correct CSS style for 3 level lists in side bar
+    jQuery(function() {
+
+        jQuery('.level2 > ul').each(function(index) {
+
+            console.log(jQuery(this).html());
+        });
     });
 };
 

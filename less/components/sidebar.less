@@ -1,8 +1,17 @@
 #dokuwiki__aside {
 
+    margin-top:     @content-margin-top;
+    padding-right:  10px;
+
     .level1, .level2, .level3, .level4, .level5 {
 
         list-style: none;
+    }
+
+    ul {
+
+        background-color:   #fff;
+        padding-left:       0;
     }
 
     li {
@@ -31,19 +40,38 @@
         text-shadow:    0 1px 0 rgba(255,255,255,0.5);
     }
 
-    .level2:hover {
+    .level2 {
 
-        background-color: @gray-lighter;
+        padding-bottom:     0;
+        padding-top:        0;
+
+        > .li {
+
+            padding-bottom: 8px;
+            padding-left:   15px;
+            padding-top:   8px
+
+            &:hover {
+
+                background-color:   @gray-lighter;
+            }
+        }
+
+        > ul {
+
+            margin-top:     4px;
+        }
     }
 
-    .level2 > .li {
+    .level3 {
 
-        padding-left:   15px;
-    }
+        &:hover {
+            background-color: @gray-lighter;
+        }
 
-    .level3 > .li {
-
-        padding-left:   35px;
+        > .li {
+            padding-left:       35px;
+        }
     }
 
     a, a:link, a:hover, a:active, a:focus, a:visited {
