@@ -20,12 +20,13 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "latest",
-    "grunt-contrib-symlink": "latest",
-    "grunt-contrib-less": "latest",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-contrib-uglify": "latest",
     "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-symlink": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
     "grunt-jscs-checker": "latest"
   }
 }
