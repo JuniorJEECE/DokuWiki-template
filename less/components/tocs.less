@@ -16,12 +16,29 @@
 
   .toc {
 
+    .level1 a {
+
+      color: @gray-darker;
+    }
+
+    .level2 a {
+
+      color: @gray-dark;
+    }
+
+    .level3, .level4, .level5 {
+
+      a {
+
+        color:  lighten(@gray, 10%);
+      }
+    }
+
     .level1, .level2, .level3, .level4, .level5 {
 
       a {
 
         font-weight: bold;
-        color:       @gray;
 
         &:hover, &:focus, &:visited, &:active {
 

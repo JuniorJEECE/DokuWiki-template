@@ -896,12 +896,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #209900;
+  color: #333333;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #1b8000;
+  color: #262626;
   text-decoration: underline;
 }
 a:focus {
@@ -985,7 +985,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #333333;
 }
 h1 small,
 h2 small,
@@ -1063,27 +1063,27 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 39px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 36px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 31px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 24px;
 }
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 18px;
 }
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 p {
   margin: 0 0 10px;
@@ -2999,7 +2999,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #209900;
+  color: #333333;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -3020,7 +3020,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #1b8000;
+  color: #262626;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3590,7 +3590,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #209900;
+  border-color: #333333;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4302,7 +4302,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #209900;
+  color: #333333;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4322,7 +4322,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #1b8000;
+  color: #262626;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4517,7 +4517,7 @@ a.badge:focus {
 }
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #209900;
+  color: #333333;
   background-color: #ffffff;
 }
 .nav-pills > li > a > .badge {
@@ -4581,7 +4581,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #209900;
+  border-color: #333333;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -6249,11 +6249,22 @@ button.close {
 .success {
   background-image: none;
 }
+.approval.approved_no,
+.approval.approved_yes {
+  background-image: none;
+  border-radius: 0;
+  margin: 10px auto 40px;
+  text-align: center;
+  width: 100% !important;
+}
 body {
   background: #fcfcfc;
 }
 #dokuwiki__content {
   margin-top: 40px;
+}
+#dokuwiki__content a.wikilink2:hover {
+  text-decoration: underline;
 }
 #dokuwiki__site {
   max-width: 1350px;
@@ -6453,6 +6464,18 @@ fieldset[disabled] #user__manager input[type="submit"].active {
   color: #209900;
   background-color: #ffffff;
 }
+#wiki__editbar #edbtn__save,
+#wiki__editbar #edbtn__preview,
+#wiki__editbar input.button {
+  margin-top: 0;
+}
+#wiki__editbar #edit__summary {
+  height: 34px;
+}
+#wiki__editbar #minoredit,
+#wiki__editbar #approved {
+  margin-top: 0;
+}
 code,
 kbd,
 pre,
@@ -6474,7 +6497,7 @@ code {
 }
 pre {
   border-width: 1px 1px 1px 6px;
-  white-space: nowrap;
+  white-space: pre-wrap;
 }
 dl.file > dt > a {
   color: #dd1144;
@@ -6488,6 +6511,9 @@ dl.file > dt > a {
 }
 .dokuwiki textarea.edit:focus {
   outline: none;
+}
+#dokuwiki__content textarea#wiki__text {
+  height: 400px;
 }
 #dokuwiki__header {
   margin-bottom: 63px;
@@ -6672,13 +6698,16 @@ dl.file > dt > a {
   box-shadow: none;
   outline: none;
 }
+a {
+  font-weight: bold;
+}
 a:hover {
-  color: #1b8000;
+  color: #262626;
   text-decoration: none;
 }
 a:link,
 a:visited {
-  color: #209900;
+  color: #333333;
 }
 a:focus {
   outline: none;
@@ -6747,8 +6776,10 @@ a:focus {
 #dokuwiki__pagetools a:hover {
   color: #555555 !important;
 }
-#dokuwiki__pagetools {
-  margin-right: -35px;
+#dokuwiki__pagetools.pg__fixed {
+  position: fixed;
+  right: 0;
+  top: 50px;
 }
 #dokuwiki__aside {
   margin-top: 40px;
@@ -6788,7 +6819,7 @@ a:focus {
 #dokuwiki__aside .level1 > .li {
   background-color: #209900;
   color: white !important;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 10px;
   padding: 8px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -6836,13 +6867,6 @@ a:focus {
   color: #333333;
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #209900;
-}
 ::-moz-selection {
   color: white !important;
   background: #209900 !important;
@@ -6850,6 +6874,21 @@ h5 {
 ::selection {
   color: white !important;
   background: #209900 !important;
+}
+h1,
+h2 {
+  font-size: 39px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 25px;
+  margin: 40px 0 20px;
+}
+h3,
+h4 {
+  margin: 30px 0 15px;
+}
+h5,
+h6 {
+  margin: 25px 0 10px;
 }
 #dw__toc {
   border-color: #eeeeee;
@@ -6864,13 +6903,23 @@ h5 {
   text-align: center;
   text-transform: uppercase;
 }
+#dw__toc .toc .level1 a {
+  color: #222222;
+}
+#dw__toc .toc .level2 a {
+  color: #333333;
+}
+#dw__toc .toc .level3 a,
+#dw__toc .toc .level4 a,
+#dw__toc .toc .level5 a {
+  color: #6f6f6f;
+}
 #dw__toc .toc .level1 a,
 #dw__toc .toc .level2 a,
 #dw__toc .toc .level3 a,
 #dw__toc .toc .level4 a,
 #dw__toc .toc .level5 a {
   font-weight: bold;
-  color: #555555;
 }
 #dw__toc .toc .level1 a:hover,
 #dw__toc .toc .level2 a:hover,

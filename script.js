@@ -149,17 +149,45 @@ window.onload = function() {
     });
 
 
-    // Correct CSS style for 3 level lists in side bar
+    // Correct pagetools position
     jQuery(function() {
 
-        jQuery('.level2 > ul').each(function(index) {
+        jQuery.fn.absolutePosition = function() {
 
-            console.log(jQuery(this).html());
-        });
+            if($('#dokuwiki__pagetools').hasClass('pg__fixed')) {
+
+                $('#dokuwiki__pagetools').removeClass('pg__fixed');
+                $('#dokuwiki__pagetools').removeAttr('style');
+            }
+        };
+
+        jQuery.fn.fixedPosition = function(leftPosition) {
+
+            if(!$('#dokuwiki__pagetools').hasClass('pg__fixed')) {
+
+                $('#dokuwiki__pagetools').addClass('pg__fixed');
+                $('#dokuwiki__pagetools').css('left', leftPosition);
+            }
+        };
+
+        if ($(window).width() < 1430)
+                $('#dokuwiki__site .wrapper.group').width($('#dokuwiki__site .wrapper.group').width() - $('#dokuwiki__pagetools').width());
+
+        // $().fixedPosition();
+        var leftPosition = $('#dokuwiki__pagetools').offset().left;
+        $(window).scroll(function (error) {
+
+            if ($(window).scrollTop() > 73)
+                $().fixedPosition(leftPosition);
+            else if ($('#dokuwiki__pagetools').css('position') === "fixed")
+                $().absolutePosition();
+         });
     });
 };
 
+
 window.onresize = function() {
+
 
     // Adjust the height
     jQuery(function() {
