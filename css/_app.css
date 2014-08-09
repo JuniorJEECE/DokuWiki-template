@@ -7034,6 +7034,20 @@ a:focus {
   right: 0;
   top: 50px;
 }
+#dw__register legend,
+#dw__profiledelete legend {
+  padding: 0 10px;
+  width: auto;
+}
+#dw__register fieldset,
+#dw__profiledelete fieldset {
+  padding: 10px;
+}
+#dw__register input.edit,
+#dw__profiledelete input.edit {
+  height: 30px;
+  padding-left: 3px;
+}
 #dokuwiki__aside {
   box-shadow: 0 0 2px #b3b3b3;
   margin-top: 40px;
