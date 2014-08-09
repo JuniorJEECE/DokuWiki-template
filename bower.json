@@ -1,13 +1,23 @@
 {
-  "name": "dokuwiki-tpl-jeece",
+  "name": "jeece-dokuwiki-template",
   "version": "1.0.0",
   "homepage": "https://github.com/twbs/bootstrap-sass",
   "authors": [
     "Théo FIDRY <theo.fidry@gmail.com>"
   ],
-  "description": "DokuWiki template JEECE.",
+  "description": "JEECE DokuWiki template.",
   "license": "MIT",
-  "main": "style.ini",
+  "main": [
+    "css",
+    "images",
+    "js",
+    "pages",
+    "detail.php",
+    "main.php",
+    "mediamanager.php",
+    "script.js",
+    "style.ini"
+  ],
   "keywords": [
     "jeece",
     "dokuwiki",
@@ -23,5 +33,6 @@
   ],
   "devDependencies": {
     "bootstrap": "~3.*"
-  }
+  },
+  "private": true
 }

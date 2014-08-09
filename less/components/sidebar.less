@@ -1,122 +1,113 @@
 #dokuwiki__aside {
 
-    box-shadow:     0 0 2px @gray-light;
-    margin-top:     @content-margin-top;
+  box-shadow:           0 0 2px @gray-light;
+  margin-top:           @content-margin-top;
 
-    .level1, .level2, .level3, .level4, .level5 {
+  .level1, .level2, .level3, .level4, .level5 {
+    list-style:         none;
+  }
 
-        list-style: none;
+  .addnewpage {
+
+    padding:            8px;
+    padding-top:        0;
+
+    #np_cat {
+
+      height:           34px;
+      width:            224px;
     }
 
-    .addnewpage {
-
-        padding:            8px;
-        padding-top:        0;
-
-        #np_cat {
-
-            height:         34px;
-            width:          224px;
-        }
-
-        input.button, input.edit {
-
-            margin-top:     5px;
-        }
-
-        input.edit {
-
-            height:         34px;
-            width:          158px;
-        }
+    input.button, input.edit {
+      margin-top:       5px;
     }
 
-    .aside {
+    input.edit {
 
-        background-color:   #fff;
-        box-shadow:         0 0 1px @gray-lighter;
+      margin-left:      0;
+      width:            158px;
+    }
+  }
+
+  .aside {
+
+    background-color:   #fff;
+    box-shadow:         0 0 1px @gray-lighter;
+  }
+
+  ul {
+    padding-left:       0;
+  }
+
+  li {
+    margin:             0;
+  }
+
+  .level1 > .li, .level1 > .li > a {
+
+    background-color:   @brand-primary;
+    color:              white !important;
+    font-size:          14px;
+    font-weight:        normal;
+    margin-bottom:      10px;
+    padding:            8px;
+    text-shadow:        1px 1px 2px rgba(0,0,0,0.25);
+
+    a {
+
+      padding-left:     0;
+
+      &, &:link, &:hover, &:active, &:focus, &:visited {
+        color:          white;
+      }
+    }
+  }
+
+  .level2, .level3 {
+
+    padding:            8px 0;
+    text-shadow:        0 1px 0 rgba(255,255,255,0.5);
+  }
+
+  .level2 {
+
+    padding-bottom:     0;
+    padding-top:        0;
+
+    & > .li {
+
+      padding-bottom:   8px;
+      padding-left:     15px;
+      padding-top:      8px
     }
 
-    ul {
+    & > ul {
+      margin-top:       0;
+    }
+  }
 
-        padding-left:       0;
+  .level2 > .li:hover {
+    background-color:   @gray-lighter;
+  }
+
+  .level3 {
+
+    &:hover {
+      background-color: @gray-lighter;
     }
 
-    li {
-
-        margin: 0;
+    > .li {
+      padding-left:     35px;
     }
+  }
 
-    .level1 > .li, .level1 > .li > a {
+  .level2, .level2 > .li > a, .level3, .level3 > .li > a {
+    font-weight: normal;
+  }
 
-        background-color:   @brand-primary;
-        color:              white !important;
-        font-size:          14px;
-        font-weight:        normal;
-        margin-bottom:      10px;
-        padding:            8px;
-        text-shadow:        1px 1px 2px rgba(0,0,0,0.25);
+  a, a:link, a:hover, a:active, a:focus, a:visited {
 
-        a {
-
-            padding-left:   0;
-
-            &, &:link, &:hover, &:active, &:focus, &:visited {
-
-            color:          white;
-        }
-        }
-    }
-
-    .level2, .level3 {
-
-        padding:            8px 0;
-        text-shadow:        0 1px 0 rgba(255,255,255,0.5);
-    }
-
-    .level2 {
-
-        padding-bottom:     0;
-        padding-top:        0;
-
-        & > .li {
-
-            padding-bottom: 8px;
-            padding-left:   15px;
-            padding-top:    8px
-        }
-        & > ul {
-
-            margin-top:     0;
-        }
-    }
-
-    .level2 > .li:hover {
-
-        background-color:   @gray-lighter;
-    }
-
-    .level3 {
-
-        &:hover {
-            background-color: @gray-lighter;
-        }
-
-        > .li {
-            padding-left:       35px;
-        }
-    }
-
-
-
-    .level2, .level2 > .li > a, .level3, .level3 > .li > a {
-
-        font-weight: normal;
-    }
-
-    a, a:link, a:hover, a:active, a:focus, a:visited {
-
-        color:              @text-color;
-        text-decoration:    none;
-    }
+    color:              @text-color;
+    text-decoration:    none;
+  }
 }

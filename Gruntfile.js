@@ -39,28 +39,26 @@ module.exports = function(grunt) {
       }
     },
 
-    // // Check the JS code style.
-    // jscs: {
-    //     app: {
-    //         options: {
-    //             config: "jscs.json",
-    //         },
-    //         files: {
-    //             src: ["js/src/**/*.js"]
-    //         }
-    //     }
-    // },
-
-    // // Check the JS code.
-    // jshint: {
-    //     options: {
-    //         curly: true,
-    //         eqeqeq: true,
-    //         eqnull: true,
-    //         browser: true
-    //     },
-    //     uses_defaults: ['js/src/**/*.js'], // don't check code coming from libraries
-    // },
+    // Check the JS code style.
+    jshint: {
+      options: {
+        browser: true,
+        curly: false,
+        eqeqeq: true,
+        eqnull: true,
+        freeze: true,
+        indent: 2,
+        quotmark: true,
+        unused: true,
+        globals: {
+          jQuery: true
+        },
+      },
+      uses_defaults: [
+        'js/src/**/*.js',
+        'script.js'
+      ]
+    },
 
     // Create symbolic links to ease the access to ressources without manually moving them.
     symlink: {
@@ -124,7 +122,7 @@ module.exports = function(grunt) {
     // Keep track of some files and perfom actions on changment; To be used in dev environment only.
     watch: {
       js: {
-        files: ['<%= meta.jsDir %>/**/*.js'],
+        files: ['<%= meta.jsDir %>/**/*.js', 'script.js'],
         tasks: ['build-js'],
         options: {
           spawn: false
@@ -148,8 +146,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-symlink');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-jscs-checker');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-jscs-checker');
 
 
   // Custom tasks.
@@ -159,7 +157,5 @@ module.exports = function(grunt) {
   grunt.registerTask('build-js', ['uglify']);
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('start', ['build', 'watch']);
-  //TODO: JSLint
-  //TODO: minify CSS
-  //TODO: validate CSS
+  grunt.registerTask('test-js', ['jshint']);
 };

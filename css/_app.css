@@ -6457,19 +6457,19 @@ button.close {
 #importation_d_utilisateurs_par_lot {
   padding-bottom: 10px;
 }
-.error {
+div.error {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
   background-image: none;
 }
-.error hr {
+div.error hr {
   border-top-color: #e4b9c0;
 }
-.error .alert-link {
+div.error .alert-link {
   color: #843534;
 }
-.success {
+div.success {
   background-image: none;
 }
 .approval.approved_no,
@@ -6740,6 +6740,11 @@ dl.file > dt > a {
 #dokuwiki__content textarea#wiki__text {
   height: 400px;
 }
+input.edit {
+  height: 34px;
+  margin-left: 5px;
+  padding-left: 5px;
+}
 input.edit:focus {
   outline: none;
   border-color: #209900;
@@ -6947,6 +6952,8 @@ input.edit:focus {
 }
 #dokuwiki__footer a {
   color: white;
+  font-weight: normal;
+  text-decoration: underline;
 }
 #dokuwiki__footer .license .urlextern {
   background-image: none;
@@ -7088,7 +7095,7 @@ a:focus {
   margin-top: 5px;
 }
 #dokuwiki__aside .addnewpage input.edit {
-  height: 34px;
+  margin-left: 0;
   width: 158px;
 }
 #dokuwiki__aside .aside {
@@ -7192,6 +7199,9 @@ h4 {
 h5,
 h6 {
   margin: 25px 0 10px;
+}
+legend {
+  border: none;
 }
 #dw__toc {
   border-color: #eeeeee;

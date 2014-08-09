@@ -20,8 +20,7 @@ All deployment dependencies are required.
 * [npm](//www.npmjs.org): Package manager for node.js (included in node in the lastest versions).
 * [Bower](//bower.io): Package manager.
 * [Grunt](//gruntjs.com): Task runner.
-* [Ruby](//www.ruby-lang.org/fr/): A dynamic, open source programming language.
-* [SASS](//sass-lang.com): Grade CSS extension language.
+* [Less](//lesscss.org/): Grade CSS extension language.
 
 
 ## Install ##
@@ -35,7 +34,7 @@ cd .../dokuwiki/lib/tpl
 git clone URL
 ```
 
-Then go to your admin panel to change the template used.
+Then go to your admin panel to change the template used. It is recommanded to enable CSS and Javascript compressing.
 
 
 ### For development ###
@@ -63,40 +62,54 @@ Install Grunt:
 sudo npm install -g grunt-cli
 ```
 
-Install Ruby: [download](//www.ruby-lang.org/fr/downloads/)
-
-Install SASS:
+Install LESS:
 
 ```bash
-sudo gem install sass
+bower install less
 ```
 
 ## Directory structure ##
 
 ```bash
 /lib/tpl/jeece
-  \-- style.ini                  # specify the CSS files and some global variables; should at least specify one print and one scree CSS file
-  +-- css                        # CSS and LESS files; Originals from the DokuWiki default template, specific
-  |                                modifications of the existant are done there but new files are in the less folder
-  \-- main.php                   # general layout of DokuWiki
-  \-- mediamanager.php           # the media selection popup
-  +-- images                     # all images used in the template
-  \-- conf
-    \-- default.php              # default settings for the template settings
-    \-- matadata.php             # configuration metadata describe properties of the settings as used by the
-  |                                Configuration Manager
-  \-- lang                       # language files
-    \-- <lang code>/lang.php     # localization strings used in the template
-    \-- <lang code>/settings.php # localization strings used in the configuration manager
-  \-- favicon.ico                # will be used if none exists in the media-directory
-  \-- template.info.txt          # a text file with template information
-  \-- mata.html                  # custom meta data
+  \-- css                        # CSS and LESS files; Originals from the DokuWiki default template, specific modifications of the existant are done there but new files are in the less folder
+      \-- _app.css               # output of the custom LESS files
+  \-- less                       # custom LESS files, compiled before being handled by DokuWiki (DokuWiki doesn't support the raw Twitter Bootstrap LESS files so we must compile them beforehand)
+      \-- components             # components style
+      \-- core                   # configuration file and variables
+      \-- libs                   # external libraries
+      \-- utilities              # helpers and cie
+      \-- app.less               # main LESS file, is compiled into css/_app.css
+  \-- js                         # Javascript files
+      \-- libs                   # external libraries
+      \-- src                    # Javascript files
+      \-- app.min.js             # output Javascript file
+  \-- script.js                  # main Javascript file; onload and onresize defined there
+  \-- images                     # all images used in the template
+
+  \-- pages                      # HTML files 
+      \-- footer.html            # at the very end of the page just before the closing body tag
+      \-- header.html            # below the pagename and wiki title
+      \-- mata.html              # custom meta data
+      \-- page.html              # page content layout
+      \-- page_actions.html      # page actions (pagetools)
+      \-- pagefooter.html        # below the last change date
+      \-- pageheader.html        # below the breadcrumbs and above the actual content
+      \-- sidebar.html           # sidebar layout
+      \-- top_fixed_navbar.html  # top part of the header
+      \-- top_navbar.html        # second part of the header
   \-- topheader.html             # file included right after the body tag
-  \-- header.html                # below the pagename and wiki title
-  \-- pageheader.html            # below the breadcrumbs and above the actual content
-  \-- pagefooter.html            # below the last change date
-  \-- footer.html                # at the very end of the page just before the closing body tag
-  +-- less                       # custom LESS files, compiled before being handled by DokuWiki (DokuWiki doesn't support the raw Twitter Bootstrap LESS files so we must compile them beforehand)
+  \-- detail.php                 # inheritance of the DokuWiki default template; check its use and get over with it
+  \-- main.php                   # general layout of DokuWiki
+  \-- mediamanager.php           # the media selection popup //TODO: update it
+  
+  \-- style.ini                  # specify the CSS files and some global variables; should at least specify one print and one scree CSS file
+  \-- template.info.txt          # a text file with template information
+  
+  \-- bower.json                 # Bower package configuration file; used only for dependency management
+  \-- package.json               # NPM package configuration file; used only for Grunt dependency management
+  \-- Gruntfile.js               # Grunt tasks configuration file
+
 ```
 
 ### Global informations ###
@@ -138,6 +151,20 @@ Relative links to images (`url(...)`) and imported stylesheets (`@import`) are a
 
 So to include the image `img1.png` which is in the folder `images`, use the path `images/img1.png`.
 
+
+#### Javascript loading ####
+
+All JavaScript is collected and delivered by `lib/exe/js.php`. This file will concatenate all found files, whitespace compress (if compress is enabled) and cache the result. It also instructs browsers to cache the file, so when you are developing new JavaScript, be sure to refresh your browser cache (hitting Shift-F5, Shift+CTL+R or similar) whenever your script was updated.
+
+DokuWiki will load JavaScript from the following places:
+
+* autogenerated JavaScript (language strings, config settings, toolbar)
+* `lib/scripts/*.js`
+* `lib/plugins/*/script.js`
+* `lib/tpl/<currenttemplate>/script.js`
+* `conf/userscript.js`
+
+Full documentation [here](https://www.dokuwiki.org/devel:javascript).
 
 
 #### About the main.php file ####
@@ -200,15 +227,16 @@ Update the composant used:
 
 ```bash
 cd .../jeece-dokuwiki-template
-sudo gem update # updates Ruby gems
-sudo nom update # updates nodes.js
-bower update    # updates Bower components
+sudo npm update    # updates nodes.js
+bower update       # updates Bower components
 ```
 
 Be sure to follow the good [Git workflow](//wiki.jeece.fr/developpeur/git).
 
 
 ### Grunt tasks ###
+
+Grunt is a task manager, use it to ease your development, checking your code and deploying your code.
 
 Build the whole project:
 
@@ -234,6 +262,14 @@ Start working without wondering which task to perfom:
 grunt start
 ```
 
+Validate Javascript:
+
+```bash
+grunt test-js
+```
+
+Note: since DokuWiki already compress the Javascript and CSS, it is not needed to do so with Grunt, although it does it pretty well.
+
 
 ## Credits ##
 
@@ -242,7 +278,7 @@ This template is based on DokuWiki default template.
 
 ### Developers ###
 
-* Théo FIDRY (DSI 2013/2014) <theo.fidry@gmail.com>
+* Théo FIDRY (DSI de JEECE 2013/2014) <theo.fidry@gmail.com>
 
 
 ### Contributors ###

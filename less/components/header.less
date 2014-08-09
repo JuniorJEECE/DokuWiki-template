@@ -1,16 +1,16 @@
 #dokuwiki__header {
 
-  margin-bottom:    (@navbar-height + @secondary-header-height - 22px);
+  margin-bottom:        (@navbar-height + @secondary-header-height - 22px);
 
   a {
 
-    font-weight:      normal;
+    font-weight:        normal;
   }
 }
 
 #main-navbar {
 
-  font-family: @font-family-header;
+  font-family:          @font-family-header;
 
   .navbar-toggle {
 
@@ -83,7 +83,6 @@
 
   @media (min-width: @screen-md-min) {
     > div {
-
       padding-right:    30px;
     }
   }
@@ -104,7 +103,6 @@
 #assets-menu > li > .dropdown-menu {
 
   @media (min-width: @screen-md-min) {
-
     min-width:  @menu-assets-width;
   }
 
@@ -164,18 +162,17 @@
 }
 
 #qsearch__in {
-
-  margin-top: 7px;
+  margin-top:     7px;
 }
 
 #secondary-navbar {
 
-  font-family: @font-family-header;
-  height:      @secondary-header-height;
-  margin-top:  @navbar-height;
-  left:        0;
-  position:    absolute;
-  right:       0;
+  font-family:    @font-family-header;
+  height:         @secondary-header-height;
+  margin-top:     @navbar-height;
+  left:           0;
+  position:       absolute;
+  right:          0;
 
   .breadcrumb {
 
@@ -193,58 +190,52 @@
       margin:     0;
 
       &::before {
-
-        color:        @text-color;
+        color:    @text-color;
       }
 
       & > a, & > .curid > a {
-        color:        lighten(@text-color, 20%);
-        text-decoration: none;
+        color:            lighten(@text-color, 20%);
+        text-decoration:  none;
 
         &:hover {
-
-          color:      @navbar-fixed-top-link-button-color-hover;
+          color:          @navbar-fixed-top-link-button-color-hover;
         }
 
         &:focus {
-
-          color:      @navbar-fixed-top-link-button-color-focus;
+          color:          @navbar-fixed-top-link-button-color-focus;
         }
       }
 
       .curid > a {
-
-        font-weight: bold;
+        font-weight:      bold;
       }
     }
   }
 
   .container-fluid {
-
-    margin-top:       7px;
+    margin-top:           7px;
   }
 
   .navbar-nav {
 
-    margin-bottom:    0;
+    margin-bottom:        0;
 
     > li > a {
 
-      padding-top:     0;
-      padding-bottom:  0;
+      padding-top:        0;
+      padding-bottom:     0;
     }
   }
 
   h1 {
 
-    border:       none;
-    font-family:  @font-family-sans-serif;
-    margin:       0;
-    padding:      0;
+    border:               none;
+    font-family:          @font-family-sans-serif;
+    margin:               0;
+    padding:              0;
   }
 }
 
 .navbar {
-
   min-height: initial;
 }

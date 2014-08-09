@@ -22,11 +22,10 @@
     "grunt": "latest",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-less": "latest",
     "grunt-contrib-symlink": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-jscs-checker": "latest"
+    "grunt-contrib-watch": "latest"
   }
 }

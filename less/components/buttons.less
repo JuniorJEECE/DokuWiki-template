@@ -1,68 +1,62 @@
 .button {
 
-    box-shadow: none !important;
+  box-shadow: none !important;
 
-    &:focus {
-
-        outline: none !important;
-    }
+  &:focus {
+    outline:  none !important;
+  }
 }
 
 input {
-
-    box-shadow: none;
+  box-shadow: none;
 }
 
 input.button {
 
-    .btn;
-    .btn-primary;
+  .btn;
+  .btn-primary;
 
-    background:     none;
-    border-color:   @brand-primary;
-    box-shadow:     none;
-    color:          @brand-primary;
+  background:     none;
+  border-color:   @brand-primary;
+  box-shadow:     none;
+  color:          @brand-primary;
 
-    &:hover {
+  &:hover {
 
-        background-color:   @brand-primary;
-        border-color:       @brand-primary;
-    }
+    background-color:   @brand-primary;
+    border-color:       @brand-primary;
+  }
 }
 
 #user__manager {
 
-    input.button[disabled] {
+  input.button[disabled] {
+    color: white !important;
+  }
 
-        color: white !important;
-    }
+  input[type="submit"] {
 
-    input[type="submit"] {
-
-        .btn;
-        .btn-primary;
-    }
+    .btn;
+    .btn-primary;
+  }
 }
 
 
 #wiki__editbar {
 
-    #edbtn__save, #edbtn__preview, input.button {
+  #edbtn__save, #edbtn__preview, input.button {
+    margin-top: 0;
+  }
 
-        margin-top: 0;
-    }
+  #edit__summary {
+    height:     34px;
+  }
 
-    #edit__summary {
-
-        height:     34px;
-    }
-
-    #minoredit, #approved {
-
-        margin-top: 0;
-    }
+  #minoredit, #approved {
+    margin-top: 0;
+  }
 }
 
 .btn_secedit input.button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
