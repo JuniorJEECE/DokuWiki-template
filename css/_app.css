@@ -5896,7 +5896,9 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+#extension__manager .tabs:before,
+#extension__manager .tabs:after {
   content: " ";
   display: table;
 }
@@ -5914,7 +5916,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+#extension__manager .tabs:after {
   clear: both;
 }
 .center-block {
@@ -6252,6 +6255,138 @@ button.close {
 #acl_manager #pbox6 {
   height: 16px;
   margin: 0;
+}
+#extension__manager .tabs {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  border-bottom: 1px solid #dddddd;
+}
+#extension__manager .tabs > li {
+  position: relative;
+  display: block;
+}
+#extension__manager .tabs > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+#extension__manager .tabs > li > a:hover,
+#extension__manager .tabs > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+#extension__manager .tabs > li.disabled > a {
+  color: #b3b3b3;
+}
+#extension__manager .tabs > li.disabled > a:hover,
+#extension__manager .tabs > li.disabled > a:focus {
+  color: #b3b3b3;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+#extension__manager .tabs .open > a,
+#extension__manager .tabs .open > a:hover,
+#extension__manager .tabs .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #333333;
+}
+#extension__manager .tabs .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+#extension__manager .tabs > li > a > img {
+  max-width: none;
+}
+#extension__manager .tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+#extension__manager .tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+#extension__manager .tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+#extension__manager .tabs > li.active > a,
+#extension__manager .tabs > li.active > a:hover,
+#extension__manager .tabs > li.active > a:focus {
+  color: #555555;
+  background-color: #fcfcfc;
+  border: 1px solid #dddddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+#extension__manager .tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+#extension__manager .tabs.nav-justified > li {
+  float: none;
+}
+#extension__manager .tabs.nav-justified > li > a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#extension__manager .tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  #extension__manager .tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  #extension__manager .tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+#extension__manager .tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+#extension__manager .tabs.nav-justified > .active > a,
+#extension__manager .tabs.nav-justified > .active > a:hover,
+#extension__manager .tabs.nav-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+  #extension__manager .tabs.nav-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  #extension__manager .tabs.nav-justified > .active > a,
+  #extension__manager .tabs.nav-justified > .active > a:hover,
+  #extension__manager .tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fcfcfc;
+  }
+}
+#extension__manager ul.tabs li a,
+#extension__manager ul.tabs li.active a {
+  background-color: inherit;
+  border-bottom-color: transparent;
+  font-weight: normal;
+  margin-left: 0;
+  outline: none;
+}
+#extension__manager ul.tabs li.active a:hover {
+  background-color: transparent;
+}
+#extension__manager .panelHeader {
+  background-color: inherit;
+}
+#extension__manager .block input.edit {
+  display: inline-block;
+  height: 24px;
+}
+#extension__manager form.install input.button {
+  float: right;
 }
 #user__manager .rightalign {
   text-align: center;
