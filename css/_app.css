@@ -6228,11 +6228,42 @@ button.close {
   color: #222222;
   text-decoration: none;
 }
-#acl__user {
-  margin-right: 10px;
+#acl_manager h2 {
+  padding-bottom: 10px;
 }
-#acl__user input.button {
+#acl_manager #acl__detail {
+  height: auto;
+}
+#acl_manager #acl__detail #acl__user select.edit,
+#acl_manager #acl__detail #acl__user input.edit {
+  height: 34px;
+}
+#acl_manager #acl__detail #acl__user input.edit {
+  width: 225px;
+}
+#acl_manager #acl__tree {
+  height: 400px;
+}
+#acl_manager #pbox1,
+#acl_manager #pbox2,
+#acl_manager #pbox3,
+#acl_manager #pbox4,
+#acl_manager #pbox5,
+#acl_manager #pbox6 {
+  height: 16px;
   margin: 0;
+}
+#user__manager .rightalign {
+  text-align: center;
+}
+#user__manager input.edit {
+  height: 30px;
+  width: 100%;
+}
+#liste_des_utilisateurs,
+#ajouter_un_utilisateur,
+#importation_d_utilisateurs_par_lot {
+  padding-bottom: 10px;
 }
 .error {
   background-color: #f2dede;
@@ -6303,7 +6334,6 @@ input.button {
   border-color: #209900;
   box-shadow: none;
   color: #209900;
-  margin-top: 20px;
 }
 input.button:focus,
 input.button:active:focus,

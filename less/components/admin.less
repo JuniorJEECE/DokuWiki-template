@@ -12,12 +12,56 @@
     }
 }
 
-#acl__user {
+#acl_manager {
 
-    margin-right: 10px;
+    h2 {
+        padding-bottom: 10px;
+    }
 
-    input.button {
+    #acl__detail {
 
+        height: auto;
+
+        #acl__user {
+
+            select.edit, input.edit {
+                height: 34px;
+            }
+
+            input.edit {
+                width: 225px;
+            }
+        }
+    }
+
+    #acl__tree {
+
+        height: 400px
+    }
+
+    #pbox1, #pbox2, #pbox3, #pbox4, #pbox5, #pbox6 {
+
+        height: 16px;
         margin: 0;
     }
+}
+
+#user__manager {
+
+    .rightalign {
+
+        text-align: center;
+    }
+
+    input.edit {
+
+        height: 30px;
+        width: 100%;
+    }
+}
+
+// h2 style for admin panels
+#liste_des_utilisateurs, #ajouter_un_utilisateur, #importation_d_utilisateurs_par_lot {
+
+        padding-bottom: 10px;
 }
