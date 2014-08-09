@@ -6701,8 +6701,10 @@ dl.file > dt > a {
   padding-right: 20px;
 }
 #dokuwiki__footer {
-  background-color: #fbfbfb;
+  background-color: #209900;
+  box-shadow: inset 0 1px 1px #555555;
   border-top: 1px solid #e5e5e5;
+  color: white;
   font-size: 12px;
   left: 0;
   line-height: 10px;
@@ -6712,6 +6714,14 @@ dl.file > dt > a {
   position: absolute;
   right: 0;
   text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+#dokuwiki__footer a {
+  color: white;
+}
+#dokuwiki__footer .license .urlextern {
+  background-image: none;
+  padding: 0;
 }
 .form-control:focus {
   border-color: #209900;
