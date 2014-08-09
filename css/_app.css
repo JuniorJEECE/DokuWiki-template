@@ -6272,6 +6272,9 @@ button.close {
   outline: 1px solid #eeeeee;
   width: auto;
 }
+#config__manager .selectiondefault {
+  background-color: transparent;
+}
 #config__manager table {
   background-color: white;
   margin: 0;
@@ -6737,6 +6740,10 @@ dl.file > dt > a {
 #dokuwiki__content textarea#wiki__text {
   height: 400px;
 }
+input.edit:focus {
+  outline: none;
+  border-color: #209900;
+}
 #dokuwiki__header {
   margin-bottom: 63px;
 }
@@ -6964,15 +6971,24 @@ a:visited {
 a:focus {
   outline: none;
 }
-.dokuwiki fieldset {
+#dw__login fieldset {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
   padding: 10px 20px;
+  margin-bottom: 20px;
 }
-.dokuwiki legend {
+#dw__login legend {
   border: none;
+  width: auto;
+  padding: 0 10px;
+}
+#dw__login input.edit {
+  width: 60%;
+  height: 30px;
+  margin-left: 5px;
+  padding-left: 3px;
 }
 .table > table.inline {
   width: 100%;
