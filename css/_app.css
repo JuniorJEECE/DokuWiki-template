@@ -6695,6 +6695,9 @@ fieldset[disabled] #user__manager input[type="submit"].active {
 #wiki__editbar #approved {
   margin-top: 0;
 }
+.btn_secedit input.button {
+  margin-top: 20px;
+}
 code,
 kbd,
 pre,
