@@ -6783,8 +6783,8 @@ a:focus {
   top: 50px;
 }
 #dokuwiki__aside {
+  box-shadow: 0 0 2px #b3b3b3;
   margin-top: 40px;
-  padding-right: 10px;
 }
 #dokuwiki__aside .level1,
 #dokuwiki__aside .level2,
@@ -6799,7 +6799,7 @@ a:focus {
 }
 #dokuwiki__aside .addnewpage #np_cat {
   height: 34px;
-  width: 214px;
+  width: 224px;
 }
 #dokuwiki__aside .addnewpage input.button,
 #dokuwiki__aside .addnewpage input.edit {
@@ -6807,7 +6807,7 @@ a:focus {
 }
 #dokuwiki__aside .addnewpage input.edit {
   height: 34px;
-  width: 149px;
+  width: 158px;
 }
 #dokuwiki__aside .aside {
   background-color: #fff;
