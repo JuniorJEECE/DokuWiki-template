@@ -416,19 +416,10 @@
                   if (empty($_SERVER['REMOTE_USER']))  // check if the user is logged in
                       tpl_action('login', 1, 'li');    // user not logged in
                   else {
-
-                      // user logged in
-                      echo '<li class="dropdown">';
-                      echo     '<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="user">';
-                                  tpl_userinfo();
-                      echo     '</a>';
-                      echo     '<ul class="dropdown-menu">';
                       tpl_action('admin', 1, 'li');
                       tpl_action('profile', 1, 'li');
                       tpl_action('register', 1, 'li');
                       tpl_action('login', 1, 'li');    // when logged in becomes log out action
-                      echo     '</ul>';
-                      echo  '</li>';
                   }
                 ?>
 

@@ -1,6 +1,11 @@
 #dokuwiki__header {
 
   margin-bottom:    (@navbar-height + @secondary-header-height - 22px);
+
+  a {
+
+    font-weight:      normal;
+  }
 }
 
 #main-navbar {
@@ -107,16 +112,22 @@
 
     list-style: none;
 
-    > li > a {
+    > li {
 
-      display:      block;
-      padding:      3px 20px;
-      padding-left: 0;
-      clear:        both;
-      font-weight:  normal !important;
-      line-height:  @line-height-base !important;
-      color:        @navbar-fixed-top-link-button-color-focus !important;
-      white-space:  nowrap;
+        margin:       0;
+        margin-left:  5px;
+
+        > a {
+
+        display:      block;
+        padding:      3px 20px;
+        padding-left: 0;
+        clear:        both;
+        font-weight:  normal !important;
+        line-height:  @line-height-base !important;
+        color:        @navbar-fixed-top-link-button-color-focus !important;
+        white-space:  nowrap;
+      }
     }
 
     .dropdown-header {
@@ -174,37 +185,48 @@
     font-size:    @font-size-small;
     margin:       0;
     margin-left:  20px;
-    margin-top:   -5px;
+    margin-top:   -2px;
     padding:      5px 10px;
 
     > li {
 
       margin:     0;
 
-      & > a {
-        color:    @navbar-fixed-top-link-button-color;
+      &::before {
+
+        color:        @text-color;
+      }
+
+      & > a, & > .curid > a {
+        color:        lighten(@text-color, 20%);
+        text-decoration: none;
 
         &:hover {
 
-          color:            @navbar-fixed-top-link-button-color-hover;
+          color:      @navbar-fixed-top-link-button-color-hover;
         }
 
         &:focus {
 
-          color:            @navbar-fixed-top-link-button-color-focus;
+          color:      @navbar-fixed-top-link-button-color-focus;
         }
+      }
+
+      .curid > a {
+
+        font-weight: bold;
       }
     }
   }
 
   .container-fluid {
 
-    margin-top: 7px;
+    margin-top:       7px;
   }
 
   .navbar-nav {
 
-    margin-bottom: 0;
+    margin-bottom:    0;
 
     > li > a {
 
@@ -214,7 +236,11 @@
   }
 
   h1 {
-    font-family: @font-family-sans-serif;
+
+    border:       none;
+    font-family:  @font-family-sans-serif;
+    margin:       0;
+    padding:      0;
   }
 }
 

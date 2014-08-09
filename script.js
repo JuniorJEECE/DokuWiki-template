@@ -140,12 +140,12 @@ window.onload = function() {
         if (jQuery('a.action.logout').length > 0) {
 
             // case where the user is logged in
-            jQuery('a.action.admin').prepend('<i class="fa fa-fw fa-wrench"></i> &nbsp;&nbsp;');
-            jQuery('a.action.profile').prepend('<i class="fa fa-fw fa-user"></i> &nbsp;&nbsp;');
-            jQuery('a.action.register').prepend('<i class="fa fa-fw fa-pencil-square-o"></i> &nbsp;&nbsp;');
-            jQuery('a.action.logout').prepend('<i class="fa fa-fw fa-sign-out"></i> &nbsp;&nbsp;');
+            jQuery('a.action.admin').prepend('<i class="fa fa-fw fa-wrench"></i>&nbsp;');
+            jQuery('a.action.profile').prepend('<i class="fa fa-fw fa-user"></i>&nbsp;');
+            jQuery('a.action.register').prepend('<i class="fa fa-fw fa-pencil-square-o"></i>&nbsp;');
+            jQuery('a.action.logout').prepend('<i class="fa fa-fw fa-sign-out"></i>&nbsp;');
         } else
-            jQuery('a.action.login').prepend('<i class="fa fa-fw fa-unlock-alt"></i> &nbsp;&nbsp;');
+            jQuery('a.action.login').prepend('<i class="fa fa-fw fa-unlock-alt"></i>&nbsp;');
     });
 
 

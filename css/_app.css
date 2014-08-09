@@ -6518,6 +6518,9 @@ dl.file > dt > a {
 #dokuwiki__header {
   margin-bottom: 63px;
 }
+#dokuwiki__header a {
+  font-weight: normal;
+}
 #main-navbar {
   font-family: Corbel;
 }
@@ -6590,6 +6593,10 @@ dl.file > dt > a {
 #assets-menu > li > .dropdown-menu > li .dropdown-submenu {
   list-style: none;
 }
+#assets-menu > li > .dropdown-menu > li .dropdown-submenu > li {
+  margin: 0;
+  margin-left: 5px;
+}
 #assets-menu > li > .dropdown-menu > li .dropdown-submenu > li > a {
   display: block;
   padding: 3px 20px;
@@ -6644,20 +6651,30 @@ dl.file > dt > a {
   font-size: 12px;
   margin: 0;
   margin-left: 20px;
-  margin-top: -5px;
+  margin-top: -2px;
   padding: 5px 10px;
 }
 #secondary-navbar .breadcrumb > li {
   margin: 0;
 }
-#secondary-navbar .breadcrumb > li > a {
-  color: #b3b3b3;
+#secondary-navbar .breadcrumb > li::before {
+  color: #333333;
 }
-#secondary-navbar .breadcrumb > li > a:hover {
+#secondary-navbar .breadcrumb > li > a,
+#secondary-navbar .breadcrumb > li > .curid > a {
+  color: #666666;
+  text-decoration: none;
+}
+#secondary-navbar .breadcrumb > li > a:hover,
+#secondary-navbar .breadcrumb > li > .curid > a:hover {
   color: #555555;
 }
-#secondary-navbar .breadcrumb > li > a:focus {
+#secondary-navbar .breadcrumb > li > a:focus,
+#secondary-navbar .breadcrumb > li > .curid > a:focus {
   color: #555555;
+}
+#secondary-navbar .breadcrumb > li .curid > a {
+  font-weight: bold;
 }
 #secondary-navbar .container-fluid {
   margin-top: 7px;
@@ -6670,7 +6687,10 @@ dl.file > dt > a {
   padding-bottom: 0;
 }
 #secondary-navbar h1 {
+  border: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .navbar {
   min-height: initial;

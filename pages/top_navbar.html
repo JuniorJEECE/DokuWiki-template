@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <h1 class="text-muted"><?php echo $conf['title'] ?></h1>
+            <h1><?php echo $conf['title'] ?></h1>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,18 +16,18 @@
             <ul class="nav navbar-nav">
                 <!-- BREADCRUMBS -->
                 <ol class="breadcrumb" id="new-breadcrumbs">
-                    <li class="text-muted">Trace :</li>
+                    <li>Trace :</li>
                 </ol>
 
                 <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
 
                     <div class="breadcrumbs" id="dokuwiki-breadcrumbs">
                         <?php if($conf['youarehere']): ?>
-                            <div class="youarehere"><?php tpl_youarehere() ?></div>
+                            <div class="youarehere breadcrumb"><?php tpl_youarehere() ?></div>
                         <?php endif ?>
-                        <!-- <?php if($conf['breadcrumbs']): ?>
-                            <div class="trace"><?php tpl_breadcrumbs() ?></div>
-                        <?php endif ?> -->
+                        <?php if($conf['breadcrumbs']): ?>
+                            <!-- <div class="trace"><?php tpl_breadcrumbs() ?></div> -->
+                        <?php endif ?>
                     </div>    <!-- /.breadcrumbs -->
 
                 <?php endif ?>
