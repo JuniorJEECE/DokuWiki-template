@@ -6256,6 +6256,60 @@ button.close {
   height: 16px;
   margin: 0;
 }
+#config__manager fieldset {
+  margin-left: 0;
+  margin-right: 0;
+}
+#config__manager input[type="submit"] {
+  float: right;
+}
+#config__manager input[type="reset"] {
+  float: left;
+}
+#config__manager legend {
+  background-color: white;
+  padding: 5px 10px;
+  outline: 1px solid #eeeeee;
+  width: auto;
+}
+#config__manager table {
+  background-color: white;
+  margin: 0;
+}
+#config__manager td.label {
+  display: table-cell;
+  max-width: 400px;
+  padding: 5px 10px;
+  padding-bottom: 0;
+  overflow-y: auto;
+}
+#config__manager td.label label {
+  display: inline-block;
+  color: #333333;
+  font-size: 120%;
+  font-weight: normal;
+}
+#config__manager td.label span.outkey {
+  background-color: transparent;
+  float: none;
+  font-size: 130%;
+  margin: 0;
+}
+#config__manager td.value {
+  vertical-align: middle;
+}
+#config__manager td.value input {
+  padding-left: 5px;
+}
+#config__manager td.value input,
+#config__manager td.value select {
+  background-color: transparent;
+  height: 32px;
+  width: 100%;
+}
+#config__manager td.value .input {
+  background-color: transparent;
+}
 #extension__manager .tabs {
   margin-bottom: 0;
   padding-left: 0;

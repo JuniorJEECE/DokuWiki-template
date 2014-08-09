@@ -46,6 +46,82 @@
     }
 }
 
+#config__manager {
+
+    fieldset {
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    input[type="submit"] {
+        float: right;
+    }
+
+    input[type="reset"] {
+        float: left;
+    }
+
+    legend {
+
+        background-color: white;
+        padding: 5px 10px;
+        outline: 1px solid @gray-lighter;
+        width: auto;
+    }
+
+    table {
+        background-color: white;
+        margin: 0;
+    }
+
+    td.label {
+
+        display: table-cell;
+        max-width: 400px;
+        padding: 5px 10px;
+        padding-bottom: 0;
+        overflow-y: auto;
+
+        label {
+
+            display: inline-block;
+            color: @text-color;
+            font-size: 120%;
+            font-weight: normal;
+        }
+
+        span.outkey {
+
+            background-color: transparent;
+            float: none;
+            font-size: 130%;
+            margin: 0;
+        }
+    }
+
+    td.value {
+
+        vertical-align: middle;
+
+        input {
+
+            padding-left: 5px;
+        }
+
+        input, select {
+
+            background-color: transparent;
+            height: 32px;
+            width: 100%;
+        }
+
+        .input {
+            background-color: transparent;
+        }
+    }
+}
+
 #extension__manager {
 
     .tabs {
