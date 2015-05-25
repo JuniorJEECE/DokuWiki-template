@@ -1,11 +1,20 @@
 <?php
 
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
     /**
      * JEECE DokuWiki template 2014
      *
      * @link     http://dokuwiki.org/template
      * @author   Théo FIDRY <theo.fidry@gmail.com>
-     * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
+     * @license  MIT
      */
 
     // check if is run form within DokuWiki

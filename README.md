@@ -17,3 +17,7 @@ To get more information about this template, see [`template.info`](template.info
 This template is based on DokuWiki default template.
 
 * [Théo FIDRY](https://github.com/theofidry) (DSI at JEECE - 2013/2014)
+
+## License
+
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
