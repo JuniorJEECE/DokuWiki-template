@@ -1,8 +1,10 @@
 # JEECE Dokuwiki template
 
+This template is designed for DokuWiki. Feel free to fork it to contribute or use it for your own DokuWiki, Junior-Entreprise or not.
+
 This file contains all the instructions for installing or continue the development of this template. It has been written with Flavored Markdown.
 
-To get more information about this tempalte, see `template.info`.
+To get more information about this template, see [`template.info`](template.info).
 
 ## Documentation
 
@@ -14,4 +16,4 @@ To get more information about this tempalte, see `template.info`.
 
 This template is based on DokuWiki default template.
 
-* [Théo FIDRY](https://github.com/theofidry) (JEECE DSI 2013/2014)
+* [Théo FIDRY](https://github.com/theofidry) (DSI at JEECE - 2013/2014)

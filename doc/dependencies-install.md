@@ -25,8 +25,21 @@ All deployment dependencies are required.
 Just go to your DokuWiki template folder and clone the project:
 
 ```bash
-cd .../dokuwiki/lib/tpl
-git clone URL
+cd ../dokuwiki/lib/tpl
+git clone https://github.com/JuniorJEECE/DokuWiki-template.git --single-branch --branch=master
+```
+
+Now you have the `master` branch installed. But the latest commit may not be production ready! To get the latest stable version, do the following:
+
+```bash
+# Get new tags from the remote
+git fetch --tags
+
+# Get the latest tag name
+latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+
+# Checkout the latest tag
+git checkout $latestTag
 ```
 
 Then go to your admin panel to change the template used. It is recommanded to enable CSS and Javascript compressing.
@@ -34,30 +47,30 @@ Then go to your admin panel to change the template used. It is recommanded to en
 
 ## For development
 
-Install the template:
+1. Install the template:
 
 ```bash
-cd .../dokuwiki/lib/tpl
-git clone URL
+cd ../dokuwiki/lib/tpl
+git clone https://github.com/JuniorJEECE/DokuWiki-template.git
 ```
 
-Then go to your admin panel to change the template used.
+2. Then go to your admin panel to change the template used.
 
-Install node.js: [download](//nodejs.org/)
+3. Install node.js: [download](//nodejs.org/)
 
-Install Bower:
+4. Install Bower:
 
 ```bash
 sudo npm install -g bower
 ```
 
-Install Grunt:
+4. Install Grunt:
 
 ```bash
 sudo npm install -g grunt-cli
 ```
 
-Install LESS:
+5. Install LESS:
 
 ```bash
 bower install less
