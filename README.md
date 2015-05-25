@@ -1,3 +1,5 @@
+# JEECE Dokuwiki template
+
 This file contains all the instructions for installing or continue the development of this template. It has been written with Flavored Markdown.
 
 To get more information about this tempalte, see `template.info`.
@@ -278,7 +280,4 @@ This template is based on DokuWiki default template.
 
 ### Developers ###
 
-* Théo FIDRY (DSI de JEECE 2013/2014) <theo.fidry@gmail.com>
-
-
-### Contributors ###
+* [Théo FIDRY](https://github.com/theofidry) (DSI de JEECE 2013/2014)

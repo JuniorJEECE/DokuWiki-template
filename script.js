@@ -38,8 +38,8 @@ function tpl_dokuwiki_mobile() {
   $('html').removeClass(device_classes).addClass(device_class);
 
   // handle some layout changes based on change in device
-  var $handle = $('#dokuwiki__aside h3.toggle');
-  var $toc = $('#dw__toc h3');
+  var $handle = $('#dokuwiki__aside').find('h3.toggle');
+  var $toc = $('#dw__toc').find('h3');
 
   if (device_class === 'desktop') {
     // reset for desktop mode
@@ -76,15 +76,19 @@ window.onload = function() {
   jQuery(function() {
 
     // Correct the search bar.
-    $('#dw__search > .no').addClass('input-group'); // add lacking class
-    $('#qsearch__in').addClass('form-control'); // add lacking class
-    $('#qsearch__in').attr('placeholder', $('#dw__search > .no > .button').attr('value')); // add a placeholder
-    $('#dw__search > .no > .button').remove(); // remove useless element
+    var $qsearch = $('#dw__search');
+    var $qsearch_in = $('#qsearch__in');
+    $qsearch.find('> .no').addClass('input-group'); // add lacking class
+
+    $qsearch_in.addClass('form-control'); // add lacking class
+    $qsearch_in.attr('placeholder', $qsearch.find('> .no > .button').attr('value')); // add a placeholder
+    $qsearch.find('> .no > .button').remove(); // remove useless element
 
 
     // Correct the user menu.
-    var user = $('#user > bdi').html() + ' (' + $('#user > bdi').next().html() + ') ' + '<b class="caret"></b>'; // get the user name and identifier
-    $('#user').html(user); // update the content by keeping only the informations above
+    var $user = $('#user');
+    var user = $user.find('> bdi').html() + ' (' + $user.find('> bdi').next().html() + ') ' + '<b class="caret"></b>'; // get the user name and identifier
+    $user.html(user); // update the content by keeping only the informations above
 
 
     // Correct the trace.
@@ -95,22 +99,24 @@ window.onload = function() {
         $(this).remove();
     });
 
-    var n = $('#dokuwiki-breadcrumbs bdi').children().length;
+    var $dw_breadcrumbs = $('#dokuwiki-breadcrumbs');
+    var n = $dw_breadcrumbs.find('bdi').children().length;
 
     // Get all elements of the DokuWiki breadcrumb, for each retrive the link and add it to the new breadcrumb
-    $('#dokuwiki-breadcrumbs bdi').each(function(index) {
+    $dw_breadcrumbs.find('bdi').each(function(index) {
 
       if (n <= 1 || index !== 0) // don't display the first element when there is multiple element; DokuWiki always display the home page as the root which is not the real tree
         $('#new-breadcrumbs').append('<li class="trace-element">' + $(this).html() + '</li>');
     });
 
     // Remove the DokuWiki breadcrumb.
-    $('#dokuwiki-breadcrumbs').remove();
+    $dw_breadcrumbs.remove();
 
 
     // Adjust the height
+    var $dw_site = $('#dokuwiki__site');
     var height = $(window).height() - ($('#dokuwiki__header').height() + $('#dokuwiki__footer').height());
-    $('#dokuwiki__site .wrapper').css('min-height', height + 'px');
+    $dw_site.find('.wrapper').css('min-height', height + 'px');
 
 
     // Add icons
@@ -128,27 +134,30 @@ window.onload = function() {
     // Correct pagetools position
     $.fn.absolutePosition = function() {
 
-      if ($('#dokuwiki__pagetools').hasClass('pg__fixed')) {
+      var $dw_pagetools = $('#dokuwiki__pagetools');
+      if ($dw_pagetools.hasClass('pg__fixed')) {
 
-        $('#dokuwiki__pagetools').removeClass('pg__fixed');
-        $('#dokuwiki__pagetools').removeAttr('style');
+        $dw_pagetools.removeClass('pg__fixed');
+        $dw_pagetools.removeAttr('style');
       }
     };
 
     $.fn.fixedPosition = function(leftPosition) {
 
-      if (!$('#dokuwiki__pagetools').hasClass('pg__fixed')) {
+      var $dw_pagetools = $('#dokuwiki__pagetools');
+      if (!$dw_pagetools.hasClass('pg__fixed')) {
 
-        $('#dokuwiki__pagetools').addClass('pg__fixed');
-        $('#dokuwiki__pagetools').css('left', leftPosition);
+        $dw_pagetools.addClass('pg__fixed');
+        $dw_pagetools.css('left', leftPosition);
       }
     };
 
+    var $dw_pagetools = $('#dokuwiki__pagetools');
     if ($(window).width() < 1430)
-      $('#dokuwiki__site .wrapper.group').width($('#dokuwiki__site .wrapper.group').width() - $('#dokuwiki__pagetools').width());
+      $dw_site.find('.wrapper.group').width($dw_site.find('.wrapper.group').width() - $dw_pagetools.width());
 
     // $().fixedPosition();
-    var leftPosition = $('#dokuwiki__pagetools').offset().left;
+    var leftPosition = $dw_pagetools.offset().left;
     $(window).scroll(function() {
 
       if ($(window).scrollTop() > 73)
@@ -168,6 +177,6 @@ window.onresize = function() {
   jQuery(function() {
 
     var height = $(window).height() - ($('#dokuwiki__header').height() + $('#dokuwiki__footer').height());
-    $('#dokuwiki__site .wrapper').css('min-height', height + 'px');
+    $('#dokuwiki__site').find('.wrapper').css('min-height', height + 'px');
   });
 };
