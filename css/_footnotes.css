@@ -1,3 +1,12 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /**
  * This file provides styles for footnotes.
  */
@@ -7,6 +16,7 @@
 /* link to footnote inside the text */
 .dokuwiki sup a.fn_top {
 }
+
 /* JSpopup */
 div.insitu-footnote {
     max-width: 40%;
@@ -17,12 +27,14 @@ div.insitu-footnote {
 
 .dokuwiki div.footnotes {
     border-top: 1px solid @ini_border;
-    padding: .5em 0 0 0;
-    margin: 50px 0 0 0;
-    clear: both;
+    padding:    .5em 0 0 0;
+    margin:     50px 0 0 0;
+    clear:      both;
 }
+
 .dokuwiki div.footnotes div.fn {
 }
+
 .dokuwiki div.footnotes div.fn sup a.fn_bot {
     font-weight: bold;
 }

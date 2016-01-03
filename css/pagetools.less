@@ -1,3 +1,12 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /**
  * This file provides the styles for the page tools
  * (fly out navigation beside the page to edit, etc).
@@ -11,33 +20,35 @@
     /* it's 40px because the 30px wide icons will have 5px more spacing to the left and right */
     padding-right: 0;
     /* give the same space to the left to balance it out */
-    padding-left: 0;
+    padding-left:  0;
 }
+
 .dokuwiki div.page {
-    height: 190px;
     min-height: 190px; /* 30 (= height of icons) x 6 (= maximum number of possible tools) + 2x5 */
-    height: auto;
+    height:     auto;
 }
+
 #dokuwiki__usertools {
     /* move the tools just outside of the site */
     right: 40px;
 }
+
 [dir=rtl] #dokuwiki__usertools {
     right: auto;
-    left: 40px;
+    left:  40px;
 }
-
 
 #dokuwiki__pagetools {
     position: absolute;
-    right: -35px;
+    right:    -35px;
     /* on same vertical level as first headline, because .page has 2em padding */
-    top: 40px;
-    width: 40px;
+    top:      40px;
+    width:    40px;
 }
+
 [dir=rtl] #dokuwiki__pagetools {
     right: auto;
-    left: -40px;
+    left:  -40px;
 }
 
 #dokuwiki__pagetools div.tools {
@@ -46,55 +57,56 @@
 }
 
 #dokuwiki__pagetools ul {
-    position: absolute;
-    right: 0;
+    position:   absolute;
+    right:      0;
     text-align: right;
-    margin: 0;
-    padding: 0;
+    margin:     0;
+    padding:    0;
     /* add transparent border to prevent jumping when proper border is added on hover */
-    border: 1px solid transparent;
-    z-index: 10;
+    border:     1px solid transparent;
+    z-index:    10;
 }
+
 [dir=rtl] #dokuwiki__pagetools ul {
-    right: auto;
-    left: 0;
+    right:      auto;
+    left:       0;
     text-align: left;
 }
 
 #dokuwiki__pagetools ul li {
-    padding: 0;
-    margin: 0;
+    padding:    0;
+    margin:     0;
     list-style: none;
-    font-size: 0.875em;
+    font-size:  0.875em;
 }
 
 #dokuwiki__pagetools ul li a {
-    display: block;
-    min-height: 20px; /* 30 - 2x5 */
-    line-height: 20px;
-    padding: 0;
+    display:             block;
+    min-height:          20px; /* 30 - 2x5 */
+    line-height:         20px;
+    padding:             0;
     background-position: right 0;
-    background-repeat: no-repeat;
+    background-repeat:   no-repeat;
     /* add transparent border to prevent jumping when proper border is added on focus */
-    border: 1px solid transparent;
-    white-space: nowrap;
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-    margin-left: auto; /* align right if the ul is larger because one item is focused */
+    border:              1px solid transparent;
+    white-space:         nowrap;
+    width:               30px;
+    height:              30px;
+    overflow:            hidden;
+    margin-left:         auto; /* align right if the ul is larger because one item is focused */
 }
 
 #dokuwiki__pagetools ul li a:before {
-    content: url(images/pagetools-sprite.png?v=2);
-    display: inline-block;
-    font-size: 0;
+    content:     url(images/pagetools-sprite.png?v=2);
+    display:     inline-block;
+    font-size:   0;
     line-height: 0;
 }
 
 [dir=rtl] #dokuwiki__pagetools ul li a {
     background-position: left 0;
-    margin-right: auto;
-    margin-left: 0;
+    margin-right:        auto;
+    margin-left:         0;
 }
 
 /* show all tools on hover and individual tools on focus */
@@ -102,19 +114,19 @@
 #dokuwiki__pagetools ul li a:focus,
 #dokuwiki__pagetools ul li a:active {
     background-color: @ini_background;
-    border-color: @ini_border;
-    border-radius: 2px;
-    box-shadow: 0 3px 6px #eeeeee;
+    border-color:     @ini_border;
+    border-radius:    2px;
+    box-shadow:       0 3px 6px #eeeeee;
     //box-shadow: 2px 2px 2px @ini_text_alt;
 }
 
 #dokuwiki__pagetools:hover ul li a,
 #dokuwiki__pagetools ul li a:focus,
 #dokuwiki__pagetools ul li a:active {
-    width: auto;
-    height: auto;
-    overflow: visible;
-    padding: 5px 40px 5px 5px;
+    width:            auto;
+    height:           auto;
+    overflow:         visible;
+    padding:          5px 40px 5px 5px;
     background-image: url(images/pagetools-sprite.png?v=2);
 }
 
@@ -143,13 +155,13 @@
 #IE7 #dokuwiki__pagetools:hover ul li a span,
 #IE7 #dokuwiki__pagetools ul li a:focus span,
 #IE7 #dokuwiki__pagetools ul li a:active span {
-    clip: auto;
-    display: inline;
+    clip:     auto;
+    display:  inline;
     position: static;
 }
 
 #IE7 #dokuwiki__pagetools ul li a span {
-    clip: rect(0 0 0 0);
+    clip:     rect(0 0 0 0);
     position: absolute;
 }
 
@@ -158,6 +170,7 @@
 #dokuwiki__pagetools ul li a:focus {
     text-decoration: none;
 }
+
 #dokuwiki__pagetools ul li a:hover {
     background-color: @ini_background_alt;
 }
@@ -206,18 +219,18 @@
  * @param string @mode The mode in which this tool should be highlighted
  */
 .pagetools-item(@action, @position, @mode) {
-  .pagetools-item(@action, @position);
-  @position-active: (@position+0.5);
+    .pagetools-item(@action, @position);
+    @position-active: (@position+0.5);
 
-  .mode_@{mode} #dokuwiki__pagetools ul li a.@{action} {
-    background-position: right @pagetools_icon_space * @position-active;
-    &:before {
-      margin-top: @pagetools_icon_space * @position-active;
+    .mode_@{mode} #dokuwiki__pagetools ul li a.@{action} {
+        background-position: right @pagetools_icon_space * @position-active;
+        &:before {
+            margin-top: @pagetools_icon_space * @position-active;
+        }
     }
-  }
-  [dir=rtl] .mode_@{mode} #dokuwiki__pagetools ul li a.@{action} {
-    background-position: left @pagetools_icon_space * @position-active;
-  }
+    [dir=rtl] .mode_@{mode} #dokuwiki__pagetools ul li a.@{action} {
+        background-position: left @pagetools_icon_space * @position-active;
+    }
 }
 
 .pagetools-item(edit, 1);

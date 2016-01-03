@@ -1,3 +1,12 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /**
  * This file provides styles for all types of links.
  */
@@ -7,10 +16,12 @@
 /* existing wikipage */
 .dokuwiki a.wikilink1 {
 }
+
 /* not existing wikipage */
 .dokuwiki a.wikilink2 {
     text-decoration: none;
 }
+
 /*.dokuwiki a.wikilink2:link,
 .dokuwiki a.wikilink2:visited {
     border-bottom: 1px dashed;
@@ -33,18 +44,21 @@
 .dokuwiki a.mail,
 .dokuwiki a.mediafile,
 .dokuwiki a.interwiki {
-    background-repeat: no-repeat;
+    background-repeat:   no-repeat;
     background-position: 0 center;
-    padding: 0 0 0 18px;
+    padding:             0 0 0 18px;
 }
+
 /* external link */
 .dokuwiki a.urlextern {
     background-image: url(../../images/external-link.png);
 }
+
 /* windows share */
 .dokuwiki a.windows {
     background-image: url(../../images/unc.png);
 }
+
 /* email link */
 .dokuwiki a.mail {
     background-image: url(../../images/email.png);
@@ -54,6 +68,7 @@
 /* link to some embedded media */
 .dokuwiki a.mediafile {
 }
+
 /* interwiki link */
 .dokuwiki a.interwiki {
 }
@@ -65,6 +80,6 @@
 [dir=rtl] .dokuwiki a.interwiki,
 [dir=rtl] .dokuwiki a.mediafile {
     background-position: right center;
-    padding: 0 18px 0 0;
-    display: inline-block; /* needed for IE7 */
+    padding:             0 18px 0 0;
+    display:             inline-block; /* needed for IE7 */
 }

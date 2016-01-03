@@ -1,17 +1,25 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 a {
+    font-weight: bold;
 
-  font-weight:          bold;
+    &:hover {
+        color:           @link-hover-color;
+        text-decoration: none;
+    }
 
-  &:hover {
-    color:              @link-hover-color;
-    text-decoration:    none;
-  }
+    &:link, &:visited {
+        color: @link-color;
+    }
 
-  &:link, &:visited {
-    color:              @link-color;
-  }
-
-  &:focus {
-    outline:            none;
-  }
+    &:focus {
+        outline: none;
+    }
 }

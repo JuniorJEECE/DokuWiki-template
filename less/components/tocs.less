@@ -1,54 +1,59 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 #dw__toc {
+    border-color: @navbar-fixed-top-color;
 
-  border-color:   @navbar-fixed-top-color;
-
-  h3 {
-
-    color:            @gray-darker;
-    font-size:        @font-size-large;
-    letter-spacing:   normal;
-    margin-top:       0;
-    padding-left:     5px;
-    padding-right:    5px;
-    text-align:       center;
-    text-transform:   uppercase;
-  }
-
-  .toc {
-
-    .level1 a {
-      color: @gray-darker;
+    h3 {
+        color:          @gray-darker;
+        font-size:      @font-size-large;
+        letter-spacing: normal;
+        margin-top:     0;
+        padding-left:   5px;
+        padding-right:  5px;
+        text-align:     center;
+        text-transform: uppercase;
     }
 
-    .level2 a {
-      color: @gray-dark;
-    }
-
-    .level3, .level4, .level5 {
-      a {
-        color:  lighten(@gray, 10%);
-      }
-    }
-
-    .level1, .level2, .level3, .level4, .level5 {
-      a {
-
-        font-weight:        bold;
-
-        &:hover, &:focus, &:visited, &:active {
-          text-decoration:  none;
+    .toc {
+        .level1 a {
+            color: @gray-darker;
         }
 
-        &:hover {
-          color:      @gray-dark;
+        .level2 a {
+            color: @gray-dark;
         }
-      }
-    }
 
-    .level2, .level3, .level4, .level5 {
-      a {
-        font-weight:  normal;
-      }
+        .level3, .level4, .level5 {
+            a {
+                color: lighten(@gray, 10%);
+            }
+        }
+
+        .level1, .level2, .level3, .level4, .level5 {
+            a {
+                font-weight: bold;
+
+                &:hover, &:focus, &:visited, &:active {
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: @gray-dark;
+                }
+            }
+        }
+
+        .level2, .level3, .level4, .level5 {
+            a {
+                font-weight: normal;
+            }
+        }
     }
-  }
 }

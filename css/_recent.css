@@ -1,3 +1,12 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /**
  * This file provides styles for the recent changes (?do=recent) and
  * old revisions (?do=revisions).
@@ -11,49 +20,58 @@
 }
 
 .dokuwiki form.changes ul li {
-    list-style: none;
+    list-style:  none;
     margin-left: 0;
 }
+
 [dir=rtl] .dokuwiki form.changes ul li {
     margin-right: 0;
 }
+
 .dokuwiki form.changes ul li span,
 .dokuwiki form.changes ul li a {
     vertical-align: middle;
 }
+
 .dokuwiki form.changes ul li span.user a {
     vertical-align: bottom;
 }
+
 .dokuwiki form.changes ul li.minor {
     opacity: .7;
 }
 
 .dokuwiki form.changes li span.date {
 }
+
 .dokuwiki form.changes li a.diff_link {
     vertical-align: baseline;
 }
+
 .dokuwiki form.changes li a.revisions_link {
     vertical-align: baseline;
 }
+
 .dokuwiki form.changes li a.wikilink1,
 .dokuwiki form.changes li a.wikilink2 {
 }
+
 .dokuwiki form.changes li span.sum {
     font-weight: bold;
 }
+
 .dokuwiki form.changes li span.user {
 }
-
 
 /*____________ page navigator ____________*/
 
 .dokuwiki div.pagenav {
     text-align: center;
-    margin: 1.4em 0;
+    margin:     1.4em 0;
 }
+
 .dokuwiki div.pagenav-prev,
 .dokuwiki div.pagenav-next {
     display: inline;
-    margin: 0 .5em;
+    margin:  0 .5em;
 }

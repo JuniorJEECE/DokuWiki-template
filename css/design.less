@@ -1,3 +1,12 @@
+/*
+ * This file is part of the JEECE Dokuwiki template package.
+ *
+ * (c) Théo FIDRY <theo.fidry@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /**
  * This file provides the main design styles for the
  * bits that surround the content.
@@ -15,43 +24,43 @@
     .headings,
     .tools {
         margin-bottom: 1.5em;
-        width: 49%;
+        width:         49%;
     }
     .tools {
         margin-top: .2em;
     }
 
     h1 {
-        margin: 0;
-        font-size: 1.5em;
+        margin:      0;
+        font-size:   1.5em;
         font-weight: normal;
 
         img {
-            float: left;
+            float:        left;
             margin-right: .5em;
         }
 
         span {
-            display: block;
+            display:     block;
             padding-top: 10px;
         }
 
         a {
-            text-decoration: none;
-            color: @ini_text;
+            text-decoration:  none;
+            color:            @ini_text;
             background-color: inherit;
         }
     }
 
     p.claim {
         margin-bottom: 0;
-        font-size: 0.875em;
+        font-size:     0.875em;
     }
 }
 
 [dir=rtl] #dokuwiki__header h1 img {
-    float: right;
-    margin-left: .5em;
+    float:        right;
+    margin-left:  .5em;
     margin-right: 0;
 }
 
@@ -61,39 +70,39 @@
 /* highlight selected tool */
 #dokuwiki__header .tools {
     ul {
-        padding-left: 0;
+        padding-left:  0;
         margin-bottom: 0;
     }
 
     li {
-        font-size: 0.875em;
+        font-size:   0.875em;
         margin-left: 1em;
-        list-style: none;
-        display: inline;
+        list-style:  none;
+        display:     inline;
     }
 
     form.search div.ajax_qsearch li {
-        font-size: 1em;
-        margin-left: 0;
-        display: block;
-        overflow: hidden;
+        font-size:     1em;
+        margin-left:   0;
+        display:       block;
+        overflow:      hidden;
         text-overflow: ellipsis;
     }
 }
 
 [dir=rtl] #dokuwiki__header .tools li {
     margin-right: 1em;
-    margin-left: 0;
+    margin-left:  0;
 }
 
 #dokuwiki__usertools a.action,
 #dokuwiki__usertools a.iw_user {
     padding-left: 20px;
-    background: transparent url(images/usertools.png) no-repeat 0 0;
+    background:   transparent url(images/usertools.png) no-repeat 0 0;
 }
 
 [dir=rtl] #dokuwiki__usertools a.action {
-    padding-left: 0;
+    padding-left:  0;
     padding-right: 20px;
 }
 
@@ -108,15 +117,15 @@
 /*____________ user tools ____________*/
 
 #dokuwiki__usertools {
-    position: absolute;
-    top: .5em;
-    right: .5em;
+    position:   absolute;
+    top:        .5em;
+    right:      .5em;
     text-align: right;
-    width: 100%;
+    width:      100%;
 
     ul {
-        margin: 0 auto;
-        padding: 0;
+        margin:    0 auto;
+        padding:   0;
         max-width: @ini_site_width;
     }
 
@@ -144,8 +153,8 @@
 
 [dir=rtl] #dokuwiki__usertools {
     text-align: left;
-    left: 40px;
-    right: auto;
+    left:       40px;
+    right:      auto;
 
     a.action.admin {
         background-position: right 0;
@@ -183,8 +192,8 @@
 }
 
 form.search {
-    display: block;
-    position: relative;
+    display:       block;
+    position:      relative;
     margin-bottom: 0.5em;
 
     input.edit {
@@ -195,12 +204,12 @@ form.search {
     input.button {
         //background: transparent url(images/search.png) no-repeat 0 0;
         border-width: 0;
-        width: 19px;
-        height: 14px;
-        text-indent: -99999px;
-        margin-left: -20px;
-        box-shadow: none;
-        padding: 0;
+        width:        19px;
+        height:       14px;
+        text-indent:  -99999px;
+        margin-left:  -20px;
+        box-shadow:   none;
+        padding:      0;
     }
 }
 
@@ -211,32 +220,32 @@ form.search {
 
     input.button {
         background-position: 5px 0;
-        margin-left: 0;
-        margin-right: -20px;
-        position: relative;
+        margin-left:         0;
+        margin-right:        -20px;
+        position:            relative;
     }
 }
 
 #IE7 form.search {
     min-height: 1px;
-    z-index: 21;
+    z-index:    21;
 }
 
 /*____________ breadcrumbs ____________*/
 
 .dokuwiki div.breadcrumbs {
-    border-top: 1px solid @ini_border;
+    border-top:    1px solid @ini_border;
     border-bottom: 1px solid @ini_background;
     margin-bottom: .5em;
-    font-size: 0.875em;
-    clear: both;
+    font-size:     0.875em;
+    clear:         both;
 
     div {
         padding: .1em .35em;
     }
 
     div:only-child {
-        border-top: 1px solid @ini_background;
+        border-top:    1px solid @ini_background;
         border-bottom: 1px solid @ini_border;
     }
 
@@ -263,13 +272,13 @@ form.search {
 
 .dokuwiki .aside {
     font-size: 0.875em;
-    overflow: hidden;
+    overflow:  hidden;
     word-wrap: break-word;
 
     /* make sidebar more condensed */
 
     h1 {
-        font-size: 1.714em;
+        font-size:     1.714em;
         margin-bottom: .292em;
     }
 
@@ -310,12 +319,12 @@ form.search {
     li ul,
     li ol {
         margin-bottom: 0;
-        padding: 0;
+        padding:       0;
     }
 
     a:link,
     a:visited {
-        color: @ini_link;
+        color:            @ini_link;
         background-color: inherit;
     }
 }
@@ -330,41 +339,41 @@ form.search {
 
 .dokuwiki .pageId {
     //position: absolute;
-    top: 0;
-    right: 0;
+    top:      0;
+    right:    0;
     overflow: hidden;
-    padding: 0;
+    padding:  0;
 
     span {
-        font-size: 0.875em;
-        border: solid @ini_background_alt;
-        border-width: 1px 1px 0;
-        background-color: @ini_background;
-        color: @ini_text_alt;
-        padding: .1em .35em;
-        border-top-left-radius: 2px;
+        font-size:               0.875em;
+        border:                  solid @ini_background_alt;
+        border-width:            1px 1px 0;
+        background-color:        @ini_background;
+        color:                   @ini_text_alt;
+        padding:                 .1em .35em;
+        border-top-left-radius:  2px;
         border-top-right-radius: 2px;
-        box-shadow: 0 0 .5em @ini_text_alt;
-        display: block;
+        box-shadow:              0 0 .5em @ini_text_alt;
+        display:                 block;
     }
 }
 
 .dokuwiki div.page {
-    background: @ini_background;
-    color: inherit;
-    border: 1px solid @ini_background_alt;
-    border-top: none;
+    background:    @ini_background;
+    color:         inherit;
+    border:        1px solid @ini_background_alt;
+    border-top:    none;
     //box-shadow: 0 0 .5em @ini_text_alt;
     border-radius: 2px;
-    padding: 1.556em 2em 2em;
+    padding:       1.556em 2em 2em;
     margin-bottom: .5em;
-    margin-top: -19px;
-    overflow: hidden;
-    word-wrap: break-word;
+    margin-top:    -19px;
+    overflow:      hidden;
+    word-wrap:     break-word;
 }
 
 .dokuwiki .docInfo {
-    font-size: 0.875em;
+    font-size:  0.875em;
     text-align: right;
 }
 
@@ -379,7 +388,7 @@ form.search {
 
 [dir=rtl] .dokuwiki .pageId {
     right: auto;
-    left: -1em;
+    left:  -1em;
 }
 
 /* footer
@@ -391,7 +400,7 @@ form.search {
 
 #dokuwiki__footer {
     margin-bottom: 1em;
-    text-align: center;
+    text-align:    center;
 
     > .pad {
         font-size: 0.875em;
@@ -399,7 +408,7 @@ form.search {
 
     div.license {
         margin-bottom: 0.5em;
-        font-size: 100%;
+        font-size:     100%;
     }
 
     div.buttons a {
